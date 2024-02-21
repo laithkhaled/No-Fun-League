@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public static bool isRunning, isThrowing;
     public float moveSpeed;
     Rigidbody2D rb;
 
@@ -16,8 +17,19 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 moveForce;
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        Vector2 moveForce = PlayerInput * moveSpeed;
+
+        // Player walking and running speed
+        if (isRunning == true)
+        {
+             moveForce = PlayerInput * moveSpeed * 2f;
+        }
+        else
+        { 
+            moveForce = PlayerInput * moveSpeed;
+        }
+
         rb.velocity = moveForce;
     }
 }
