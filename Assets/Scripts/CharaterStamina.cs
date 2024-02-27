@@ -46,20 +46,27 @@ public class CharaterStamina : MonoBehaviour
             isOutOfBreath = false;
         }
 
-        // Delay initially when out of breath
+        // Delay stamina recharge initially when out of breath
         if (isOutOfBreath == true && stamina == 0)
         {
             Invoke("CatchBreath", 1.5f);
-            // Debug.Log("Caught Breath.");
+            Debug.Log("Caught Breath.");
+        }
+        // Recharges stamina after catching breath
+        else if (isOutOfBreath == true && !Input.GetKey(KeyCode.LeftShift))
+        {
+            stamina += staminaIncRate;
+            Debug.Log("Recharging stamina after catching breath.");
         }
         else if (isOutOfBreath && Input.GetKey(KeyCode.LeftShift))
         {
             // nothing happens
         }
-        // Otherwise, passively regenerate stamina
-        else
+        // Otherwise, passively regenerate stamina if not full
+        else if (isOutOfBreath == false && stamina != totalStamina)
         {
             stamina += staminaIncRate * 0.40f;
+            Debug.Log("Recharging stamina normally.");
         }
 
         // Stamina stays in range of 0 - totalStamina
