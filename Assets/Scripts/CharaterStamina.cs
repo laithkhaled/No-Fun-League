@@ -47,26 +47,25 @@ public class CharaterStamina : MonoBehaviour
         }
 
         // Delay stamina recharge initially when out of breath
-        if (isOutOfBreath == true && stamina == 0)
+        if (isOutOfBreath && stamina == 0 && !Input.GetKey(KeyCode.LeftShift))
         {
             Invoke("CatchBreath", 1.5f);
-            Debug.Log("Caught Breath.");
+            //Debug.Log("Caught Breath.");
         }
         // Recharges stamina after catching breath
-        else if (isOutOfBreath == true && !Input.GetKey(KeyCode.LeftShift))
+        else if (isOutOfBreath && !Input.GetKey(KeyCode.LeftShift))
         {
             stamina += staminaIncRate;
-            Debug.Log("Recharging stamina after catching breath.");
+            //Debug.Log("Recharging stamina after catching breath.");
         }
         else if (isOutOfBreath && Input.GetKey(KeyCode.LeftShift))
         {
             // nothing happens
         }
         // Otherwise, passively regenerate stamina if not full
-        else if (isOutOfBreath == false && stamina != totalStamina)
+        else if (!isOutOfBreath && stamina != totalStamina && !Input.GetKey(KeyCode.LeftShift))
         {
             stamina += staminaIncRate * 0.40f;
-            Debug.Log("Recharging stamina normally.");
         }
 
         // Stamina stays in range of 0 - totalStamina
@@ -77,14 +76,10 @@ public class CharaterStamina : MonoBehaviour
         {
             staminaBar.transform.localScale = new Vector2(stamina / totalStamina, staminaBar.transform.localScale.y);
         }
-    } 
+    }
 
-   void CatchBreath()
+    void CatchBreath()
     {
-        // If out of breath, stop reducing stamina and start refilling
-        if (isOutOfBreath && !Input.GetKey(KeyCode.LeftShift))
-        {
-            stamina += staminaIncRate;
-        }
+        stamina += staminaIncRate;
     }
 }
