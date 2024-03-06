@@ -4077,7 +4077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2badfe3642470674c83db19f3f671e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaDcrRate: 0.2
+  staminaDcrRate: 0.45
   staminaIncRate: 0.2
   staminaBar: {fileID: 1662813416}
 --- !u!114 &1631451855
