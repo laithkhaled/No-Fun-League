@@ -5,7 +5,7 @@ public class SuspicionChecks : MonoBehaviour
 {
     static float totalSuspicion = 100f;
     static float suspicion;
-    public float suspicionIncAmount;
+    public float suspicionIncAmount, suspicionDecAmount;
     private bool suspicionTriggered = false;
 
     private Slider suspicionSlider;
@@ -31,6 +31,7 @@ public class SuspicionChecks : MonoBehaviour
             {
                 if (collider.CompareTag("Foul"))
                 {
+                    suspicion -= suspicionDecAmount;
                     foulDetected = true;
                     break;
                 }
@@ -40,16 +41,16 @@ public class SuspicionChecks : MonoBehaviour
             if (!foulDetected)
             {
                 suspicion += suspicionIncAmount;
-
-                // Clamp suspicion value between 0 and totalSuspicion
-                suspicion = Mathf.Clamp(suspicion, 0f, totalSuspicion);
-
-                // Update suspicion slider value
-                UpdateSuspicionSliderValue();
-
-                // Set the suspicion triggered flag to true
-                suspicionTriggered = true;
             }
+
+            // Clamp suspicion value between 0 and totalSuspicion
+            suspicion = Mathf.Clamp(suspicion, 0f, totalSuspicion);
+
+            // Update suspicion slider value
+            UpdateSuspicionSliderValue();
+
+            // Set the suspicion triggered flag to true
+            suspicionTriggered = true;
         }
     }
 

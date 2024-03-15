@@ -8,6 +8,8 @@ TagManager:
   - False Call
   - SuspicionMeter
   - Field
+  - Flag
+  - Football
   layers:
   - Default
   - TransparentFX

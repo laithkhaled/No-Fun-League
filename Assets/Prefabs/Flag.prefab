@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspicionIncAmount: 20
+  suspicionDecAmount: 10
 --- !u!58 &2773939666091602402
 CircleCollider2D:
   m_ObjectHideFlags: 0
