@@ -1,0 +1,129 @@
+using UnityEngine;
+
+public class OffensiveFormations : MonoBehaviour
+{
+    public GameObject Wide1;
+    public GameObject Wide2;
+    public GameObject Wide3;
+    public GameObject TEnd;
+    public GameObject LeftT;
+    public GameObject LeftG;
+    public GameObject Center;
+    public GameObject RightG;
+    public GameObject RightT;
+
+    private float playerSpeed; 
+    private bool isRunning = false;
+
+    private void Start()
+    {
+        Player player = GetComponentInChildren<Player>();
+        if (player != null)
+        {
+            playerSpeed = player.speed;
+        }
+        else
+        {
+            Debug.LogError("Player script not found attached to child objects!");
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && !isRunning) //Can't click F when the play is happening
+        {
+            // Randomly choose a play. Need to make it choose through Formations in the future.
+            int randomPlay = Random.Range(1, 4);
+            switch (randomPlay)
+            {
+                case 1:
+                    StartCoroutine(Shotgun1());
+                    break;
+                case 2:
+                    StartCoroutine(Shotgun2());
+                    break;
+                case 3:
+                    StartCoroutine(Shotgun3());
+                    break;
+            }
+        }
+    }
+
+    private System.Collections.IEnumerator Shotgun1()
+    {
+        isRunning = true;
+
+        //Wide1 Runs a verticle
+        MoveObject(Wide1, Vector3.right, 5f); 
+
+        //Wide2 runs slant
+        MoveObject(Wide2, Vector3.right, 1f); 
+        MoveObject(Wide2, Vector3.down, 4f);
+
+        //Wide 3 runs a curl
+        MoveObject(Wide3, Vector3.right, 3f);
+        MoveObject(Wide3, Vector3.left, 0.5f);
+
+        //TEnd runs a stick
+        MoveObject(TEnd, Vector3.right, 2f);
+        MoveObject(TEnd, Vector3.down, 1f);
+
+        // Wait for all objects to finish moving
+        yield return new WaitForSeconds(5f);
+        isRunning = false;
+    }
+
+    private System.Collections.IEnumerator Shotgun2()
+    {
+        isRunning = true;
+
+        // Wide 1 runs drag
+        MoveObject(Wide1, Vector3.right, 1f);
+        MoveObject(Wide1, Vector3.down, 4f);
+
+        // Wide2 & 3 run drags
+        MoveObject(Wide3, Vector3.right, 1f);
+        MoveObject(Wide2, Vector3.right, 1f);
+        MoveObject(Wide3, Vector3.up, 4f);
+        MoveObject(Wide2, Vector3.up, 4f);
+
+        //TEnd Runs a vertical
+        MoveObject(TEnd, Vector3.right, 5f);
+
+        // Wait for all objects to finish moving
+        yield return new WaitForSeconds(5f);
+        isRunning = false;
+    }
+
+    private System.Collections.IEnumerator Shotgun3()
+    {
+        isRunning = true;
+
+        //All Receivers run verticles.
+        MoveObject(TEnd, Vector3.right , 5f);
+        MoveObject(Wide1, Vector3.right , 5f);
+        MoveObject(Wide2, Vector3.right , 5f);
+        MoveObject(Wide3, Vector3.right , 5f);
+
+        // Wait for all objects to finish moving
+        yield return new WaitForSeconds(5f);
+        isRunning = false;
+    }
+
+    // Coroutine to move object for specified duration
+    private void MoveObject(GameObject obj, Vector3 direction, float duration)
+    {
+        StartCoroutine(MoveObjectCoroutine(obj, direction, duration));
+    }
+
+    private System.Collections.IEnumerator MoveObjectCoroutine(GameObject obj, Vector3 direction, float duration)
+    {
+        float timer = 0f;
+        while (timer < duration)
+        {
+            obj.transform.Translate(direction * playerSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+}
