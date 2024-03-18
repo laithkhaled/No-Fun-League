@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Foul
+  - False Call
+  - SuspicionMeter
+  - Field
+  - Flag
+  - Football
   layers:
   - Default
   - TransparentFX
