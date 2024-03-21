@@ -12,19 +12,18 @@ public class ThrowFlag : MonoBehaviour
     [SerializeField] float trajectoryTimeStep = 0.05f;
     [SerializeField] int trajectoryStepCount = 15;
 
-    Vector2 velocity, startMousePos, currentMousePos; 
-
+    Vector2 velocity, startMousePos, currentMousePos;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
         // On left click, show trajectory 
-        if(Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             velocity = (startMousePos - currentMousePos) * launchForce;
@@ -33,7 +32,7 @@ public class ThrowFlag : MonoBehaviour
         }
 
         // Throw flag and then clear trajectory line
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             FireProjectile();
             clearTrajectory();
@@ -44,7 +43,7 @@ public class ThrowFlag : MonoBehaviour
     void DrawTrajectory()
     {
         Vector3[] positions = new Vector3[trajectoryStepCount];
-        for(int i = 0; i < trajectoryStepCount; i++)
+        for (int i = 0; i < trajectoryStepCount; i++)
         {
             float t = i * trajectoryTimeStep;
             Vector3 pos = (Vector2)spawnPoint.position + velocity * t + 0.5f * Physics2D.gravity * t * t;

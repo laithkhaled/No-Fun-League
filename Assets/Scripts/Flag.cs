@@ -6,7 +6,7 @@ public class Flag : MonoBehaviour
 {
     Rigidbody2D rb;
     bool hasHit;
-    float timeToTurnOffKinematic = 1.0f; 
+    float timeToTurnOffKinematic = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +35,12 @@ public class Flag : MonoBehaviour
         hasHit = true;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
+
+        // Call FlagLanded method in LevelManager
+        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        if (levelManager != null)
+        {
+            levelManager.FlagLanded();
+        }
     }
 }
