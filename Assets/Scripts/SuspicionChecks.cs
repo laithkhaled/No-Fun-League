@@ -19,6 +19,19 @@ public class SuspicionChecks : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // If suspicion reaches 100 then game over
+        if(suspicion == 100f)
+        {
+            LevelManager levelManager = FindObjectOfType<LevelManager>();
+            if (levelManager != null)
+            {
+                levelManager.GameOver();
+            }
+
+            // Reset suspicion for reload
+            suspicion = 0;
+        }
+
         // Check if the object is not moving
         if (rb.velocity.magnitude <= 0.01f && !suspicionTriggered)
         {

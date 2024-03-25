@@ -36,7 +36,7 @@ public class Flag : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
 
-        // Call FlagLanded method in LevelManager
+        // Call FlagLanded method in LevelManager when flag lands
         LevelManager levelManager = FindObjectOfType<LevelManager>();
         if (levelManager != null)
         {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class LevelManager : MonoBehaviour
     public GameObject flagCallWindow;
     public ThrowFlag throwFlagScript;
     public CharacterMovement characterMoveScript;
+
+    public GameObject gameOverWindow;
+    public GameObject winnerWindow;
 
     void Start()
     {
@@ -42,6 +46,10 @@ public class LevelManager : MonoBehaviour
             if (currentTime <= 0f)
             {
                 StopTimer();
+                // Retrieve scores from winzone script 
+                // If home score is higher then home wins
+                    // Win level
+                // Else lose level
             }
 
             // Update timer text
@@ -76,5 +84,31 @@ public class LevelManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    // Game Over
+    public void GameOver()
+    {
+        gameOverWindow.SetActive(true);
+        characterMoveScript.enabled = false;
+        throwFlagScript.enabled = false;
+    }
+
+    public void PlayerWins()
+    {
+        winnerWindow.SetActive(true);
+        characterMoveScript.enabled = false;
+        throwFlagScript.enabled = false;
+    }
+
+    // Reset scene
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextScene()
+    {
+        // Load next level or level map
     }
 }
