@@ -39,7 +39,7 @@ public class WinZone : MonoBehaviour
 
     void UpdateScoreUI()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString();
     }
 
     // Will allow teams to score after play gets reset

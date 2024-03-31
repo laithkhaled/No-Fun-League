@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public static bool isRunning, isThrowing;
     public float moveSpeed;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
