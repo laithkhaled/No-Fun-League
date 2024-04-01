@@ -395,7 +395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 25023213}
-  speed: 5
 --- !u!61 &53830463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -494,7 +493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &55658447
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 42847559}
-  speed: 5
 --- !u!61 &55658452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -698,7 +695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &66813827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1014,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152873096}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -1065,10 +1061,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 152873096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 89041275924c440f499ac29a5a40f837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &163530203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,7 +1495,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212863626}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -1510,7 +1505,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &212863636
 BoxCollider2D:
@@ -1547,10 +1542,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 212863626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 89041275924c440f499ac29a5a40f837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &241101032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,7 +2244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,7 +2564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &574459117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,7 +2785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &651474169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,7 +3048,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765103949}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -3104,10 +3095,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 765103949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 89041275924c440f499ac29a5a40f837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &776593204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,7 +3202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 651474170}
-  speed: 5
 --- !u!61 &776593209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3311,7 +3300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &779222878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,7 +3452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &788579004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,10 +3720,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 801633504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 89041275924c440f499ac29a5a40f837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &905255870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,7 +4163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 172639039}
-  speed: 5
 --- !u!61 &1023978462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4276,7 +4261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1112407962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,7 +4616,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131629806}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -4679,10 +4663,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131629806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 89041275924c440f499ac29a5a40f837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1166708092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,7 +4970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1207545891
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,7 +5150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1691196812}
-  speed: 5
 --- !u!61 &1207784858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5267,7 +5248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1231753811
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,7 +5520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1513511961}
-  speed: 2
 --- !u!61 &1258623506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5576,7 +5555,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1258623501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1400aa27c2c2b466ba306c4188ba0ef7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a6341db2ded74ce580f7b97e14f3b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1258623508
@@ -5602,7 +5581,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258623501}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -5612,7 +5591,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1258623512
 MonoBehaviour:
@@ -5626,7 +5605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &1258623513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6294,7 +6272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1518522128
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,6 +6544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
+  rb: {fileID: 0}
 --- !u!50 &1631451853
 Rigidbody2D:
   serializedVersion: 4
@@ -7076,7 +7054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1729987624}
-  speed: 5
 --- !u!61 &1661043945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7175,7 +7152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1662813416
 GameObject:
   m_ObjectHideFlags: 0
@@ -7538,7 +7514,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1513511961}
-  speed: 2
 --- !u!61 &1708401958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7574,7 +7549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1708401953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1400aa27c2c2b466ba306c4188ba0ef7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a6341db2ded74ce580f7b97e14f3b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1708401960
@@ -7600,7 +7575,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708401953}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -7624,7 +7599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &1708401965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7837,7 +7811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763467974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.1, y: 1.263556, z: 0.4898124}
+  m_LocalPosition: {x: 18.099998, y: 1.263556, z: 0.4898124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7909,7 +7883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 178530650}
-  speed: 5
 --- !u!61 &1763467979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8008,7 +7981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1785731825
 GameObject:
   m_ObjectHideFlags: 0
@@ -8113,7 +8085,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1513511961}
-  speed: 1
 --- !u!61 &1785731830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8199,7 +8170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &1785731837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8746,7 +8716,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1513511961}
-  speed: 2
 --- !u!61 &2065385960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8832,7 +8801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &2065385967
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,8 +15,8 @@ public class DefensiveLine : MonoBehaviour
         // Check if the trigger collision is with an Offensive Lineman
         if (other.CompareTag("OffensiveLineman"))
         {
+            Debug.Log("Triggered by Offensive Lineman");
             receiverController.StopMovement(); // Call the method to handle getting tackled
-             Debug.Log("Triggered by Offensive Lineman");
         }
     }
 }

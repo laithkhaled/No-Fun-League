@@ -9,12 +9,13 @@ public class OffensivePlayer : MonoBehaviour
         receiverController = GetComponent<PlayerController>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the collision is with a defensive player and this player has the ball
-        if (collision.gameObject.CompareTag("Defense") && receiverController.hasBall)
+        if (collision.CompareTag("Defense") && receiverController.hasBall)
         {
             receiverController.GetTackled(); // Call the method to handle getting tackled
+            Debug.Log("Triggered by OffensiveLineMan and Defense.");
         }
     }
 }
