@@ -3,20 +3,21 @@ using UnityEngine;
 
 public class DefensiveLine : MonoBehaviour
 {
-    private PlayerController receiverController;
+    private DefensiveCoverage playerController;
+    Rigidbody2D rb;
 
     void Start()
     {
-        receiverController = GetComponent<PlayerController>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         // Check if the trigger collision is with an Offensive Lineman
-        if (other.CompareTag("OffensiveLineman"))
+        if (collider.gameObject.CompareTag("Defense"))
         {
-            receiverController.StopMovement(); // Call the method to handle getting tackled
-             Debug.Log("Triggered by Offensive Lineman");
+            DefensiveCoverage playerController = collider.GetComponent<DefensiveCoverage>();
+            playerController.StopMovement(); // Call the method to handle getting tackled
         }
     }
 }

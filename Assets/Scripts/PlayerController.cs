@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     public bool hasBall = false;
     private Transform endZoneTarget = null;
     private bool isBlocked = false;
+    Rigidbody2D rb;
 
     void Start()
     {
         FindEndZoneTarget();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -34,10 +36,13 @@ public class PlayerController : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
-    public void StopMovement()
+    public void StopMovement(Rigidbody2D rb)
     {
-        isBlocked = true;
-        speed = 0; // Stop the player's movement
+        rb.velocity = Vector2.zero; 
+        rb.isKinematic = true;
+        if(rb.isKinematic == true && rb.velocity == Vector2.zero){
+            Debug.Log("Kinematic is true");
+        }
         Debug.Log("Defensive Player is stopped");
     }
 
@@ -60,16 +65,6 @@ public class PlayerController : MonoBehaviour
     public void CatchBall()
     {
         hasBall = true;
-    }
-
-    public void LoseBall()
-    {
-        hasBall = false;
-    }
-    
-    public void Blocked()
-    {
-        StopMovement();
     }
     
 }
