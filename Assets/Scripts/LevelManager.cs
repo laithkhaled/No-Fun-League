@@ -9,7 +9,14 @@ public class LevelManager : MonoBehaviour
     public float totalTime = 30f;
     private float currentTime;
     private bool isTimerRunning = false, isPlayRunning = false;
+    private bool halftimeShown = false;
+
     public TMP_Text timerText;
+    public TMP_Text homeScoreText;
+    public TMP_Text awayScoreText;
+    public TMP_Text quarterText;
+    public int homeScore;
+    public int awayScore;
 
     public GameObject flagCallWindow;
     public ThrowFlag throwFlagScript;
@@ -17,42 +24,52 @@ public class LevelManager : MonoBehaviour
 
     public GameObject gameOverWindow;
     public GameObject winnerWindow;
+    public GameObject halftimeWindow;
 
     void Start()
     {
         currentTime = totalTime;
-        // Update timer on start
         DisplayTime(totalTime);
+        quarterText.text = "Quarter 1";
     }
 
     void Update()
     {
-        // If player presses f, timer starts
         if (Input.GetKey(KeyCode.F) && !isPlayRunning)
         {
             StartTimer();
             isPlayRunning = true;
-            // Can throw flags and move
             throwFlagScript.enabled = true;
             characterMoveScript.enabled = true;
         }
 
-        // Update the timer if it is running
         if (isTimerRunning)
         {
             currentTime -= Time.deltaTime;
 
-            // Stop timer if time runs out
+            if (currentTime <= totalTime / 2 && !halftimeShown)
+            {
+                StopTimer();
+                halftimeShown = true;
+                ShowHalftimeScreen();
+                quarterText.text = "Quarter 2";
+            }
+
             if (currentTime <= 0f)
             {
                 StopTimer();
-                // Retrieve scores from winzone script 
-                // If home score is higher then home wins
-                    // Win level
-                // Else lose level
+                homeScore = int.Parse(homeScoreText.text);
+                awayScore = int.Parse(awayScoreText.text);
+                if (homeScore > awayScore)
+                {
+                    PlayerWins();
+                }
+                else
+                {
+                    GameOver();
+                }
             }
 
-            // Update timer text
             DisplayTime(currentTime);
         }
     }
@@ -67,12 +84,10 @@ public class LevelManager : MonoBehaviour
         isTimerRunning = false;
     }
 
-    // Called when flag lands
     public void FlagLanded()
     {
         StopTimer();
         flagCallWindow.SetActive(true);
-        // Turn off player movmeent and flag throwing
         characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
         isPlayRunning = false;
@@ -86,22 +101,26 @@ public class LevelManager : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    // Game Over
     public void GameOver()
     {
         gameOverWindow.SetActive(true);
+        // Player is not able to move and all velocity is stopped
+        // Also cannot throw flags
         characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
+        characterMoveScript.rb.velocity = Vector3.zero;
     }
 
     public void PlayerWins()
     {
         winnerWindow.SetActive(true);
+        // Player is not able to move and all velocity is stopped
+        // Also cannot throw flags
         characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
+        characterMoveScript.rb.velocity = Vector3.zero;
     }
 
-    // Reset scene
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -110,5 +129,20 @@ public class LevelManager : MonoBehaviour
     public void NextScene()
     {
         // Load next level or level map
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    void ShowHalftimeScreen()
+    {
+        halftimeWindow.SetActive(true);
+        // Player is not able to move and all velocity is stopped
+        // Also cannot throw flags
+        characterMoveScript.enabled = false;
+        throwFlagScript.enabled = false;
+        characterMoveScript.rb.velocity = Vector3.zero;
     }
 }
