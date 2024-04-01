@@ -17,15 +17,8 @@ public class OffensiveFormations : MonoBehaviour
 
     private void Start()
     {
-        Player player = GetComponentInChildren<Player>();
-        if (player != null)
-        {
-            playerSpeed = player.speed;
-        }
-        else
-        {
-            Debug.LogError("Player script not found attached to child objects!");
-        }
+        PlayerController player = GetComponentInChildren<PlayerController>();
+        playerSpeed = player.speed;
     }
 
     private void Update()

@@ -11,6 +11,10 @@ TagManager:
   - Flag
   - Football
   - Receiver
+  - Endzone1
+  - Defense
+  - OffensiveLinemen
+  - OffensiveLineman
   layers:
   - Default
   - TransparentFX

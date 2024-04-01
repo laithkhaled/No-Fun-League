@@ -1,13 +1,19 @@
+using System.Collections;
 using UnityEngine;
 
 public class DefensiveCoverage : MonoBehaviour
 {
     public Transform destination;
-    public float speed = 5f; 
+    private PlayerController playerController;
 
     private bool isMoving = false;
 
-    void Update()
+    private void Start()
+    {
+        playerController = GetComponent<PlayerController>();
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && !isMoving)
         {
@@ -15,25 +21,30 @@ public class DefensiveCoverage : MonoBehaviour
         }
     }
 
-    void StartMoving()
+    public void StartMoving()
     {
-            isMoving = true;
-            StartCoroutine(MoveToDestination()); 
+        isMoving = true;
+        StartCoroutine(MoveToDestination());
     }
 
-    System.Collections.IEnumerator MoveToDestination()
+    private IEnumerator MoveToDestination()
     {
         while (Vector3.Distance(transform.position, destination.position) > 0.05f)
         {
-            // Calculate the direction to move towards the destination
             Vector3 direction = destination.position - transform.position;
             direction.Normalize();
-            transform.position += direction * speed * Time.deltaTime;
+            transform.position += direction * playerController.speed * Time.deltaTime;
 
             yield return null;
         }
         transform.position = destination.position;
-
         isMoving = false;
+    }
+
+    public void StopMovement()
+    {
+        StopAllCoroutines();
+        isMoving = false; 
+        Debug.Log("Defensive player movement stopped.");
     }
 }
