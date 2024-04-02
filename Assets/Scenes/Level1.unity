@@ -3113,9 +3113,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 618128046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cd5b8b591cf24ddaaa4b43009db5782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  receivers: []
+  footballPrefab: {fileID: 116550499}
 --- !u!114 &618128049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12771,7 +12773,6 @@ GameObject:
   - component: {fileID: 1942034254}
   - component: {fileID: 1942034253}
   - component: {fileID: 1942034252}
-  - component: {fileID: 1942034251}
   m_Layer: 0
   m_Name: RunningB
   m_TagString: Untagged
@@ -12794,18 +12795,6 @@ Transform:
   m_Father: {fileID: 1459827038}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1942034251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942034249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d753fc1fa24064d8aad44b953d49b7f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1942034252
 BoxCollider2D:
   m_ObjectHideFlags: 0

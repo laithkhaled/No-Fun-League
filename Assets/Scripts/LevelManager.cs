@@ -149,5 +149,13 @@ public class LevelManager : MonoBehaviour
         characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
         characterMoveScript.rb.velocity = Vector3.zero;
+        isPlayRunning = false;
+    }
+
+    public void HalfTimeOver()
+    {
+        halftimeWindow.SetActive(false);
+        characterMoveScript.enabled = true;
+        throwFlagScript.enabled = true;
     }
 }
