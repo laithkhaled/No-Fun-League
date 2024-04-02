@@ -88,8 +88,13 @@ public class LevelManager : MonoBehaviour
     {
         StopTimer();
         flagCallWindow.SetActive(true);
+        // Player is not able to move and all velocity is stopped
+        // Also cannot throw flags
         characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
+        characterMoveScript.rb.velocity = Vector3.zero;
+
+        // Play running flag is reset
         isPlayRunning = false;
     }
 

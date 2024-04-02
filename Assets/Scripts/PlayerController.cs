@@ -55,11 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetLineOfScrimmage()
     {
-        GameObject lineOfScrimmage = GameObject.FindWithTag("LineOfScrimmage");
-        if (lineOfScrimmage != null)
-        {
-            lineOfScrimmage.transform.position = transform.position;
-        }
+ 
     }
 
     public void CatchBall()

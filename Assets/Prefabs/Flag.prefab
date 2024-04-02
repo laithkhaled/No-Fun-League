@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef1ffd006b4ae247a738cca3d1bdcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspicionIncAmount: 50
+  suspicionIncAmount: 25
   suspicionDecAmount: 10
 --- !u!58 &2773939666091602402
 CircleCollider2D:

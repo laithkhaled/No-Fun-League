@@ -14,6 +14,7 @@ TagManager:
   - Endzone1
   - Defense
   - OffensiveLineman
+  - LineOfScrimmage
   layers:
   - Default
   - TransparentFX

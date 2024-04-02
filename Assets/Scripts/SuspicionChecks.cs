@@ -10,17 +10,40 @@ public class SuspicionChecks : MonoBehaviour
 
     private Slider suspicionSlider;
     private Rigidbody2D rb;
+    private GameObject handle;
+    private GameObject handle1;
+    private GameObject handle2;
 
     private void Awake()
     {
         suspicionSlider = GameObject.FindGameObjectWithTag("SuspicionMeter").GetComponent<Slider>();
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
+
+        // Find the handles dynamically
+        Transform handleTransform = suspicionSlider.transform.Find("Fill Area/Fill/Handle");
+        Transform handle1Transform = suspicionSlider.transform.Find("Fill Area/Fill/Handle1");
+        Transform handle2Transform = suspicionSlider.transform.Find("Fill Area/Fill/Handle2");
+
+        if (handleTransform != null && handle1Transform != null && handle2Transform != null)
+        {
+            handle = handleTransform.gameObject;
+            handle1 = handle1Transform.gameObject;
+            handle2 = handle2Transform.gameObject;
+
+            //Debug.Log("Handle found: " + handle.name);
+            //Debug.Log("Handle1 found: " + handle1.name);
+            //Debug.Log("Handle2 found: " + handle2.name);
+        }
+        else
+        {
+            Debug.LogError("One or more handles not found as great grandchildren of the Slider.");
+        }
     }
 
     private void FixedUpdate()
     {
         // If suspicion reaches 100 then game over
-        if(suspicion == 100f)
+        if (suspicion == 100f)
         {
             LevelManager levelManager = FindObjectOfType<LevelManager>();
             if (levelManager != null)
@@ -62,11 +85,30 @@ public class SuspicionChecks : MonoBehaviour
             // Update suspicion slider value
             UpdateSuspicionSliderValue();
 
+            // Activate/deactivate handles based on suspicion level
+            if (suspicion < 33)
+            {
+                handle.SetActive(true);
+                handle1.SetActive(false);
+                handle2.SetActive(false);
+            }
+            else if (suspicion >= 33 && suspicion < 66)
+            {
+                handle.SetActive(false);
+                handle1.SetActive(true);
+                handle2.SetActive(false);
+            }
+            else
+            {
+                handle.SetActive(false);
+                handle1.SetActive(false);
+                handle2.SetActive(true);
+            }
+
             // Set the suspicion triggered flag to true
             suspicionTriggered = true;
         }
     }
-
 
     void UpdateSuspicionSliderValue()
     {
