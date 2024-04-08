@@ -6,12 +6,17 @@ public class CharacterMovement : MonoBehaviour
 {
     public static bool isRunning, isThrowing;
     public float moveSpeed;
+
     public Rigidbody2D rb;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,5 +36,20 @@ public class CharacterMovement : MonoBehaviour
         }
 
         rb.velocity = moveForce;
+        // Track speed for animator
+        float speed = moveForce.magnitude;
+        animator.SetFloat("Speed", speed);
+
+        // Flip the sprite based on movement direction
+        // Moving left
+        if (moveForce.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        // Moving right
+        else if (moveForce.x < 0) 
+        {
+            spriteRenderer.flipX = false; 
+        }
     }
 }

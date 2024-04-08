@@ -14,9 +14,19 @@ public class ThrowFlag : MonoBehaviour
 
     Vector2 velocity, startMousePos, currentMousePos;
 
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -34,14 +44,24 @@ public class ThrowFlag : MonoBehaviour
         // Throw flag and then clear trajectory line
         if (Input.GetMouseButtonUp(0))
         {
+            animator.SetBool("isThrowing", false);
+            animator.SetBool("hasThrown", true);
             FireProjectile();
             clearTrajectory();
+            StartCoroutine(ResetHasThrownFlag());
         }
+    }
+
+    IEnumerator ResetHasThrownFlag()
+    {
+        yield return new WaitForSeconds(0.21f); 
+        animator.SetBool("hasThrown", false);
     }
 
     // Use line renderer to show player where flag is going
     void DrawTrajectory()
     {
+        animator.SetBool("isThrowing", true);
         Vector3[] positions = new Vector3[trajectoryStepCount];
         for (int i = 0; i < trajectoryStepCount; i++)
         {

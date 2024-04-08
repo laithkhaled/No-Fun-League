@@ -9,6 +9,8 @@ public class CharaterStamina : MonoBehaviour
     public GameObject staminaBar;
     bool isOutOfBreath;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Awake()
     {

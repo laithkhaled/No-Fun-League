@@ -158,4 +158,15 @@ public class LevelManager : MonoBehaviour
         characterMoveScript.enabled = true;
         throwFlagScript.enabled = true;
     }
+
+    public void ClearFlags()
+    {
+        GameObject[] flags = GameObject.FindGameObjectsWithTag("Flag");
+
+        foreach (GameObject flag in flags)
+        {
+            Destroy(flag);
+        }
+    }
+
 }
