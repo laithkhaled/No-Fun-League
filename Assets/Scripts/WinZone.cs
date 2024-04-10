@@ -28,7 +28,7 @@ public class WinZone : MonoBehaviour
 
             // If player has football in correct endzone and no team has scored for this play
             // Scored check is to make sure score is updated once per play
-            if (child.CompareTag("Player") && child.Find("Football") != null && !scored)
+            if (child.Find("Football") != null && !scored)
             {
                 score += 7;
                 scored = true;

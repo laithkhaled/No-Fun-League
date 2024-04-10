@@ -50,19 +50,42 @@ public class PlayManager : MonoBehaviour
     public GameObject RE;
     public GameObject LE;
 
+    // Plays
+    public GameObject shotGunPositions;
+    public GameObject pistolPositions;
+
     void Start()
     {
         // Call random formation
-        //shotgunFormation();
-        PistolFormation();
+        int formationChoice = Random.Range(1, 3);
+
+        if (formationChoice == 1)
+        {
+            ShotgunFormation();
+        } else if (formationChoice == 2)
+        {
+            PistolFormation();
+        }
     }
 
-    void shotgunFormation()
+    void ShotgunFormation()
     {
+        shotGunPositions.SetActive(true);
+        int formationChoice = Random.Range(1, 3);
+
         // Offense 
         Transform offenseParent = GameObject.Find("LineOfS/ShotgunPositions/Offense").transform;
-        QuarterB.transform.position = offenseParent.Find("QBSH").position;
-        RunningB.transform.position = offenseParent.Find("RBSH").position;
+        // Set QB and Running back positions
+        if (formationChoice == 1)
+        {
+            QuarterB.transform.position = GameObject.Find("QBUC").transform.position;
+            RunningB.transform.position = GameObject.Find("QBSH").transform.position;
+        }
+        else if (formationChoice == 2)
+        {
+            QuarterB.transform.position = GameObject.Find("QBSH").transform.position;
+            RunningB.transform.position = GameObject.Find("RBSH").transform.position;
+        }
         LeftT.transform.position = offenseParent.Find("LT").position;
         LeftG.transform.position = offenseParent.Find("LG").position;
         Center.transform.position = offenseParent.Find("C").position;
@@ -90,10 +113,22 @@ public class PlayManager : MonoBehaviour
 
     void PistolFormation()
     {
+        pistolPositions.SetActive(true);
+        int formationChoice = Random.Range(1, 3);
+
         // Offense 
         Transform offenseParent = GameObject.Find("LineOfS/PistolPositions/Offense").transform;
-        QuarterB.transform.position = offenseParent.Find("QBSH").position;
-        RunningB.transform.position = offenseParent.Find("RBSH").position;
+        // Set QB and Running back positions
+        if (formationChoice == 1)
+        {
+            QuarterB.transform.position = GameObject.Find("QBUC").transform.position;
+            RunningB.transform.position = GameObject.Find("QBSH").transform.position;
+        }
+        else if (formationChoice == 2)
+        {
+            QuarterB.transform.position = GameObject.Find("QBSH").transform.position;
+            RunningB.transform.position = GameObject.Find("RBSH").transform.position;
+        }
         LeftT.transform.position = offenseParent.Find("LT").position;
         LeftG.transform.position = offenseParent.Find("LG").position;
         Center.transform.position = offenseParent.Find("C").position;

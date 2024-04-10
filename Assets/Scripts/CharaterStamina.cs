@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharaterStamina : MonoBehaviour
 {
     float totalStamina = 100, stamina;
     public float staminaDcrRate, staminaIncRate;
-    public GameObject staminaBar;
+    public Slider staminaBar;
     bool isOutOfBreath;
 
     public Animator animator;
@@ -76,7 +77,7 @@ public class CharaterStamina : MonoBehaviour
         // Reduce stamina bar
         if (staminaBar != null)
         {
-            staminaBar.transform.localScale = new Vector2(stamina / totalStamina, staminaBar.transform.localScale.y);
+            staminaBar.value = stamina / totalStamina;
         }
     }
 
