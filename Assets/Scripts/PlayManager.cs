@@ -56,16 +56,8 @@ public class PlayManager : MonoBehaviour
 
     void Start()
     {
-        // Call random formation
-        int formationChoice = Random.Range(1, 3);
-
-        if (formationChoice == 1)
-        {
-            ShotgunFormation();
-        } else if (formationChoice == 2)
-        {
-            PistolFormation();
-        }
+        // Choose random formation
+        RandomFormation();
     }
 
     void ShotgunFormation()
@@ -152,5 +144,20 @@ public class PlayManager : MonoBehaviour
         Safety2.transform.position = defenseParent.Find("S2").position;
         LineB1.transform.position = defenseParent.Find("LB1").position;
         LineB2.transform.position = defenseParent.Find("LB2").position;
+    }
+
+    void RandomFormation()
+    {
+        // Call random formation
+        int formationChoice = Random.Range(1, 3);
+
+        if (formationChoice == 1)
+        {
+            ShotgunFormation();
+        }
+        else if (formationChoice == 2)
+        {
+            PistolFormation();
+        }
     }
 }

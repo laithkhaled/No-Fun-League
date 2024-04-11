@@ -47,7 +47,7 @@ public class WinZone : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         // Check if the exiting object is tagged as "Player" and if it has the football child object
-        if (other.CompareTag("Player") && other.transform.Find("Football") != null && scored)
+        if (other.transform.Find("Football") != null && scored)
         {
             // Reset the scored flag
             scored = false;

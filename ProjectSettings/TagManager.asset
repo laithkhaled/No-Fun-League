@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Foul
-  - False Call
   - SuspicionMeter
   - Field
   - Flag
@@ -15,6 +13,10 @@ TagManager:
   - Defense
   - OffensiveLineman
   - LineOfScrimmage
+  - Holding
+  - PassInterference
+  - RoughHousing
+  - Foul
   layers:
   - Default
   - TransparentFX

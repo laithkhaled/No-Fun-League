@@ -14,7 +14,12 @@ public class SuspicionChecks : MonoBehaviour
     private GameObject handle1;
     private GameObject handle2;
 
-    private void Awake()
+    static int correctChoice = 0;
+    private int playerChoice = 0;
+    private int randomFalseFoul = 0;
+    static bool foulDetected = false;
+
+    private void Start()
     {
         suspicionSlider = GameObject.FindGameObjectWithTag("SuspicionMeter").GetComponent<Slider>();
         rb = GetComponent<Rigidbody2D>();
@@ -29,18 +34,16 @@ public class SuspicionChecks : MonoBehaviour
             handle = handleTransform.gameObject;
             handle1 = handle1Transform.gameObject;
             handle2 = handle2Transform.gameObject;
-
-            //Debug.Log("Handle found: " + handle.name);
-            //Debug.Log("Handle1 found: " + handle1.name);
-            //Debug.Log("Handle2 found: " + handle2.name);
         }
         else
         {
             Debug.LogError("One or more handles not found as great grandchildren of the Slider.");
         }
+
+        randomFalseFoul = Random.Range(1, 4);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         // If suspicion reaches 100 then game over
         if (suspicion == 100f)
@@ -62,18 +65,31 @@ public class SuspicionChecks : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<Collider2D>().bounds.size, 0f);
 
             // Check each collider for the "Foul" tag
-            bool foulDetected = false;
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("Foul"))
+                // True foul checks
+                if (collider.CompareTag("Holding"))
                 {
                     suspicion -= suspicionDecAmount;
                     foulDetected = true;
+                    correctChoice = 1;
+                    break;
+                }
+                else if (collider.CompareTag("PassInterference")) {
+                    suspicion -= suspicionDecAmount;
+                    foulDetected = true;
+                    correctChoice = 2;
+                    break;
+                }
+                else if (collider.CompareTag("RoughHousing")) {
+                    suspicion -= suspicionDecAmount;
+                    foulDetected = true;
+                    correctChoice = 3;
                     break;
                 }
             }
 
-            // If no "Foul" tag was detected, increase suspicion
+            // False calls
             if (!foulDetected)
             {
                 suspicion += suspicionIncAmount;
@@ -85,26 +101,6 @@ public class SuspicionChecks : MonoBehaviour
             // Update suspicion slider value
             UpdateSuspicionSliderValue();
 
-            // Activate/deactivate handles based on suspicion level
-            if (suspicion < 33)
-            {
-                handle.SetActive(true);
-                handle1.SetActive(false);
-                handle2.SetActive(false);
-            }
-            else if (suspicion >= 33 && suspicion < 66)
-            {
-                handle.SetActive(false);
-                handle1.SetActive(true);
-                handle2.SetActive(false);
-            }
-            else
-            {
-                handle.SetActive(false);
-                handle1.SetActive(false);
-                handle2.SetActive(true);
-            }
-
             // Set the suspicion triggered flag to true
             suspicionTriggered = true;
         }
@@ -112,10 +108,82 @@ public class SuspicionChecks : MonoBehaviour
 
     void UpdateSuspicionSliderValue()
     {
-        // Update the value of the suspicion slider
-        if (suspicionSlider != null)
+
+        suspicionSlider.value = suspicion;
+
+        // Activate/deactivate handles based on suspicion level
+        if (suspicion < 33)
         {
-            suspicionSlider.value = suspicion;
+            handle.SetActive(true);
+            handle1.SetActive(false);
+            handle2.SetActive(false);
         }
+        else if (suspicion >= 33 && suspicion < 66)
+        {
+            handle.SetActive(false);
+            handle1.SetActive(true);
+            handle2.SetActive(false);
+        }
+        else
+        {
+            handle.SetActive(false);
+            handle1.SetActive(false);
+            handle2.SetActive(true);
+        }
+
+        // Debug.Log("Suspicion: " + suspicion);
+    }
+
+    // Call the appropriate choice method based on the correct choice
+    void HandleChoice()
+    {
+        // True foul
+        if (foulDetected)
+        {
+            if (playerChoice == correctChoice)
+            {
+                suspicion -= suspicionIncAmount / 2;
+            }
+            else
+            {
+                suspicion += suspicionIncAmount / 2;
+            }
+        }
+        // False foul
+        else
+        {
+            if (playerChoice == randomFalseFoul)
+            {
+                suspicion -= suspicionIncAmount / 2;
+            }
+            else
+            {
+                suspicion += suspicionIncAmount / 2;
+            }
+        }
+
+        // Debug.Log("Suspicion in handle choice: " + suspicion);
+
+        // Clamp suspicion value between 0 and totalSuspicion
+        suspicion = Mathf.Clamp(suspicion, 0f, totalSuspicion);
+
+        UpdateSuspicionSliderValue();
+    }
+
+    // Flag call button choices
+    public void ChooseHolding()
+    {
+        playerChoice = 1;
+        HandleChoice();
+    }
+    public void ChoosePassInterference()
+    {
+        playerChoice = 2;
+        HandleChoice();
+    }
+    public void ChooseRoughHousing()
+    {
+        playerChoice = 3;
+        HandleChoice();
     }
 }
