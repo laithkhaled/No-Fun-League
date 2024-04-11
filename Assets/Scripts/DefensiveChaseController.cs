@@ -3,33 +3,57 @@ using UnityEngine;
 public class DefensiveChaseController : MonoBehaviour
 {
     public float speed = 5f;
-    private bool isChasing = false;
-    private Transform target; // Reference to the target (receiver with the ball)
+    private GameObject ballCarrier = null;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
-        if (isChasing && target != null)
+        FindBallCarrier();
+        ChaseBallCarrier();
+    }
+
+    private void FindBallCarrier()
+    {
+        // Only search for the ball carrier if there isn't already one identified
+        if (ballCarrier == null || !ballCarrier.GetComponent<PlayerController>().hasBall)
         {
-            MoveTowardsTarget();
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Receiver");
+            foreach (var player in players)
+            {
+                if (player.GetComponent<PlayerController>().hasBall)
+                {
+                    ballCarrier = player;
+                    break; // Stop searching once the ball carrier is found
+                }
+            }
         }
     }
 
-    public void StartChasing(Transform newTarget)
+    private void ChaseBallCarrier()
     {
-        isChasing = true;
-        target = newTarget;
+        if (ballCarrier != null)
+        {
+            float chaseSpeed = speed * 1.1f; // Chase at 110% of the ball carrier's speed
+
+            // Calculate direction towards the ball carrier
+            Vector2 direction = (ballCarrier.transform.position - transform.position).normalized;
+            rb.MovePosition(rb.position + direction * chaseSpeed * Time.deltaTime);
+        }
     }
 
-    public void StopChasing()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        isChasing = false;
-        target = null;
-    }
-
-    private void MoveTowardsTarget()
-    {
-        // Calculate direction towards the target
-        Vector3 direction = (target.position - transform.position).normalized;
-        transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        if (collision.gameObject == ballCarrier)
+        {
+            // Stop the ball carrier
+            ballCarrier.GetComponent<PlayerController>().StopMovement();
+            // Optionally, reset ball carrier reference if needed
+            ballCarrier = null;
+        }
     }
 }

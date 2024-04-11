@@ -4,47 +4,94 @@ using UnityEngine;
 public class DefensiveCoverage : MonoBehaviour
 {
     public Transform destination;
+    public float speed = 1f; 
     private PlayerController playerController;
-
+    private GameObject ballCarrier = null;
+    private Rigidbody2D rb;
     private bool isMoving = false;
 
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
+        FindBallCarrier(); // Always check for a ball carrier
+
         if (Input.GetKeyDown(KeyCode.F) && !isMoving)
         {
-            StartMoving();
+            StartMovingToDestination();
+        }
+
+        // Prioritize chasing the ball carrier if one is identified
+        if (ballCarrier != null)
+        {
+            ChaseBallCarrier();
+        }
+        else if (isMoving)
+        {
+            // Move to the destination if not chasing the ball carrier
+            MoveToDestination();
         }
     }
 
-    public void StartMoving()
+    public void StartMovingToDestination()
     {
         isMoving = true;
-        StartCoroutine(MoveToDestination());
     }
 
-    private IEnumerator MoveToDestination()
+    private void MoveToDestination()
     {
-        while (Vector3.Distance(transform.position, destination.position) > 0.05f)
+        if (destination != null)
         {
-            Vector3 direction = destination.position - transform.position;
-            direction.Normalize();
-            transform.position += direction * playerController.speed * Time.deltaTime;
-
-            yield return null;
+            transform.position = Vector3.MoveTowards(transform.position, destination.position, playerController.speed * Time.deltaTime);
+            if (transform.position == destination.position)
+            {
+                StopMovement();
+            }
         }
-        transform.position = destination.position;
-        isMoving = false;
     }
 
     public void StopMovement()
     {
-        StopAllCoroutines();
-        isMoving = false; 
-        Debug.Log("Defensive player movement stopped.");
+        isMoving = false;
+    }
+
+    private void FindBallCarrier()
+    {
+        if (ballCarrier == null || !ballCarrier.GetComponent<PlayerController>().hasBall)
+        {
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Receiver");
+            foreach (var player in players)
+            {
+                if (player.GetComponent<PlayerController>().hasBall)
+                {
+                    ballCarrier = player;
+                    break; // Stop searching once the ball carrier is found
+                }
+            }
+        }
+    }
+
+    private void ChaseBallCarrier()
+{
+    if (ballCarrier != null)
+    {
+        Vector3 direction = (ballCarrier.transform.position - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.position = Vector3.MoveTowards(transform.position, ballCarrier.transform.position, speed * Time.deltaTime);
+    }
+}
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject == ballCarrier)
+        {
+            ballCarrier.GetComponent<PlayerController>().GetTackled();
+            ballCarrier = null;
+        }
     }
 }

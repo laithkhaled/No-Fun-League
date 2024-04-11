@@ -1060,6 +1060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
+  speed: 5
 --- !u!212 &156587462
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1440,7 +1441,6 @@ GameObject:
   - component: {fileID: 232868496}
   - component: {fileID: 232868495}
   - component: {fileID: 232868494}
-  - component: {fileID: 232868493}
   m_Layer: 0
   m_Name: Safety2
   m_TagString: Defense
@@ -1463,19 +1463,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &232868493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232868490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &232868494
 Rigidbody2D:
   serializedVersion: 4
@@ -1521,7 +1508,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1550,6 +1537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1515232113}
+  speed: 5
 --- !u!212 &232868499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2551,7 +2539,6 @@ GameObject:
   - component: {fileID: 485071926}
   - component: {fileID: 485071925}
   - component: {fileID: 485071924}
-  - component: {fileID: 485071923}
   m_Layer: 0
   m_Name: LineB1
   m_TagString: Defense
@@ -2574,19 +2561,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &485071923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485071920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &485071924
 Rigidbody2D:
   serializedVersion: 4
@@ -2632,7 +2606,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2661,6 +2635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 725997094}
+  speed: 5
 --- !u!212 &485071929
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6022,7 +5997,6 @@ GameObject:
   - component: {fileID: 998409849}
   - component: {fileID: 998409848}
   - component: {fileID: 998409847}
-  - component: {fileID: 998409846}
   m_Layer: 0
   m_Name: CornerB3
   m_TagString: Defense
@@ -6045,19 +6019,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &998409846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998409843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &998409847
 Rigidbody2D:
   serializedVersion: 4
@@ -6067,7 +6028,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998409843}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -6103,7 +6064,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6132,6 +6093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1702635401}
+  speed: 5
 --- !u!212 &998409852
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6509,6 +6471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
+  speed: 5
 --- !u!212 &1018179198
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7844,7 +7807,6 @@ GameObject:
   - component: {fileID: 1181185634}
   - component: {fileID: 1181185633}
   - component: {fileID: 1181185632}
-  - component: {fileID: 1181185631}
   m_Layer: 0
   m_Name: CornerB2
   m_TagString: Defense
@@ -7867,19 +7829,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1181185631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181185628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1181185632
 Rigidbody2D:
   serializedVersion: 4
@@ -7889,7 +7838,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181185628}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -7925,7 +7874,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7954,6 +7903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 108986753}
+  speed: 5
 --- !u!212 &1181185637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9027,6 +8977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
+  speed: 5
 --- !u!212 &1237521234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13030,7 +12981,6 @@ GameObject:
   - component: {fileID: 1709659793}
   - component: {fileID: 1709659792}
   - component: {fileID: 1709659791}
-  - component: {fileID: 1709659790}
   m_Layer: 0
   m_Name: LineB2
   m_TagString: Defense
@@ -13053,19 +13003,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1709659790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709659787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1709659791
 Rigidbody2D:
   serializedVersion: 4
@@ -13111,7 +13048,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13140,6 +13077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1578415966}
+  speed: 5
 --- !u!212 &1709659796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13584,7 +13522,6 @@ GameObject:
   - component: {fileID: 1786608103}
   - component: {fileID: 1786608102}
   - component: {fileID: 1786608101}
-  - component: {fileID: 1786608100}
   m_Layer: 0
   m_Name: CornerB1
   m_TagString: Defense
@@ -13607,19 +13544,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1786608100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786608097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1786608101
 Rigidbody2D:
   serializedVersion: 4
@@ -13629,12 +13553,12 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786608097}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -13665,7 +13589,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13694,6 +13618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 51256213}
+  speed: 5
 --- !u!212 &1786608106
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14166,6 +14091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
+  speed: 5
 --- !u!212 &1840783833
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14825,7 +14751,6 @@ GameObject:
   - component: {fileID: 1986101030}
   - component: {fileID: 1986101029}
   - component: {fileID: 1986101028}
-  - component: {fileID: 1986101027}
   m_Layer: 0
   m_Name: Safety1
   m_TagString: Defense
@@ -14848,19 +14773,6 @@ Transform:
   m_Father: {fileID: 1678184567}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1986101027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986101024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1ca2e8e4bd0465cac6008afea6535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1986101028
 Rigidbody2D:
   serializedVersion: 4
@@ -14906,7 +14818,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14935,6 +14847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1910874841}
+  speed: 5
 --- !u!212 &1986101033
 SpriteRenderer:
   m_ObjectHideFlags: 0

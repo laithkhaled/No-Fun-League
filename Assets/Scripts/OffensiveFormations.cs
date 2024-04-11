@@ -13,16 +13,19 @@ public class OffensiveFormations : MonoBehaviour
     public GameObject RightT;
 
     private float playerSpeed; 
+    private bool playerTackled;
     private bool isRunning = false;
 
     private void Start()
     {
         PlayerController player = GetComponentInChildren<PlayerController>();
         playerSpeed = player.speed;
+        
     }
 
     private void Update()
     {
+        //CheckIfTackled();
         if (Input.GetKeyDown(KeyCode.F) && !isRunning) //Can't click F when the play is happening
         {
             // Randomly choose a play. Need to make it choose through Formations in the future.
@@ -40,6 +43,13 @@ public class OffensiveFormations : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private bool CheckIfTackled(GameObject obj)
+    {
+        PlayerController player = obj.GetComponent<PlayerController>();
+        playerTackled = player.isTackled;
+        return playerTackled;
     }
 
     private System.Collections.IEnumerator Shotgun1()
@@ -112,11 +122,15 @@ public class OffensiveFormations : MonoBehaviour
     private System.Collections.IEnumerator MoveObjectCoroutine(GameObject obj, Vector3 direction, float duration)
     {
         float timer = 0f;
-        while (timer < duration)
+        // Add conidition that stops players from moving
+        while (timer < duration && !CheckIfTackled(obj))
         {
+            //Debug.Log("*******" + (duration-timer));
             obj.transform.Translate(direction * playerSpeed * Time.deltaTime);
             timer += Time.deltaTime;
             yield return null;
         }
     }
+
 }
+

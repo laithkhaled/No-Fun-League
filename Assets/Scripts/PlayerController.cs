@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,18 +5,18 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public bool hasBall = false;
     private Transform endZoneTarget = null;
-    private bool isBlocked = false;
-    Rigidbody2D rb;
+    private bool isMoving = false; 
+    public bool isTackled = false;
+
 
     void Start()
     {
         FindEndZoneTarget();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (hasBall && !isBlocked && endZoneTarget != null)
+        if (hasBall && isMoving && endZoneTarget != null)
         {
             MoveTowardsEndZone();
         }
@@ -26,41 +25,36 @@ public class PlayerController : MonoBehaviour
     private void FindEndZoneTarget()
     {
         GameObject endZone = GameObject.FindGameObjectWithTag("Endzone1");
-        endZoneTarget = endZone.transform;
+        if (endZone != null)
+        {
+            endZoneTarget = endZone.transform;
+        }
     }
 
     private void MoveTowardsEndZone()
     {
-        // Calculate direction towards the end zone
-        Vector2 direction = (endZoneTarget.position - transform.position).normalized;
-        transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        Vector3 direction = (endZoneTarget.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    public void StopMovement(Rigidbody2D rb)
+    public void StopMovement()
     {
-        rb.velocity = Vector2.zero; 
-        rb.isKinematic = true;
-        if(rb.isKinematic == true && rb.velocity == Vector2.zero){
-            Debug.Log("Kinematic is true");
-        }
-        Debug.Log("Defensive Player is stopped");
+        isMoving = false; 
     }
 
     public void GetTackled()
     {
+        isMoving = false; 
         hasBall = false;
-        speed = 0; 
-        SetLineOfScrimmage(); 
-    }
-
-    private void SetLineOfScrimmage()
-    {
- 
+        isTackled = true;
+        StopMovement();
+        Debug.Log("Player is tackled");
+        Debug.Log(isTackled);
     }
 
     public void CatchBall()
     {
         hasBall = true;
+        isMoving = true; 
     }
-    
 }
