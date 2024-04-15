@@ -6,9 +6,14 @@ public class DefensiveChaseController : MonoBehaviour
     private GameObject ballCarrier = null;
     private Rigidbody2D rb;
 
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -43,6 +48,9 @@ public class DefensiveChaseController : MonoBehaviour
             // Calculate direction towards the ball carrier
             Vector2 direction = (ballCarrier.transform.position - transform.position).normalized;
             rb.MovePosition(rb.position + direction * chaseSpeed * Time.deltaTime);
+
+            float movementSpeed = direction.magnitude;
+            animator.SetFloat("Speed", movementSpeed);
         }
     }
 

@@ -5,14 +5,14 @@ public class SuspicionChecks : MonoBehaviour
 {
     static float totalSuspicion = 100f;
     static float suspicion;
-    public float suspicionIncAmount, suspicionDecAmount;
+    static public float suspicionIncAmount, suspicionDecAmount;
     private bool suspicionTriggered = false;
 
-    private Slider suspicionSlider;
+    static Slider suspicionSlider;
     private Rigidbody2D rb;
-    private GameObject handle;
-    private GameObject handle1;
-    private GameObject handle2;
+    static GameObject handle;
+    static GameObject handle1;
+    static GameObject handle2;
 
     static int correctChoice = 0;
     private int playerChoice = 0;
@@ -185,5 +185,19 @@ public class SuspicionChecks : MonoBehaviour
     {
         playerChoice = 3;
         HandleChoice();
+    }
+
+    // Static method to modify suspicion increase amount
+    public static void ModifySuspicionIncAmount(float amount)
+    {
+        suspicionIncAmount = amount;
+        Debug.Log(suspicionIncAmount);
+    }
+
+    // Static method to modify suspicion decrease amount
+    public static void ModifySuspicionDecAmount(float amount)
+    {
+        suspicionDecAmount = amount;
+        Debug.Log(suspicionDecAmount);
     }
 }

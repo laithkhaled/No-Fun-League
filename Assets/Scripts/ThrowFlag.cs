@@ -26,7 +26,6 @@ public class ThrowFlag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -54,7 +53,7 @@ public class ThrowFlag : MonoBehaviour
 
     IEnumerator ResetHasThrownFlag()
     {
-        yield return new WaitForSeconds(0.21f); 
+        yield return new WaitForSeconds(0.15f); 
         animator.SetBool("hasThrown", false);
     }
 

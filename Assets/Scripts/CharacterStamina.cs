@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharaterStamina : MonoBehaviour
+public class CharacterStamina : MonoBehaviour
 {
-    float totalStamina = 100, stamina;
+    public float totalStamina = 100, stamina;
     public float staminaDcrRate, staminaIncRate;
     public Slider staminaBar;
     bool isOutOfBreath;

@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     public GameObject flagCallWindow;
     public ThrowFlag throwFlagScript;
     public CharacterMovement characterMoveScript;
+    public CharacterStamina staminaScript;
 
     public GameObject gameOverWindow;
     public GameObject winnerWindow;
@@ -98,6 +99,17 @@ public class LevelManager : MonoBehaviour
         isPlayRunning = false;
     }
 
+    public void EndPlay()
+    {
+        StopTimer();
+        characterMoveScript.enabled = false;
+        throwFlagScript.enabled = false;
+        characterMoveScript.rb.velocity = Vector3.zero;
+
+        // Play running flag is reset
+        isPlayRunning = false;
+    }
+
     void DisplayTime(float timeToDisplay)
     {
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
@@ -150,6 +162,9 @@ public class LevelManager : MonoBehaviour
         throwFlagScript.enabled = false;
         characterMoveScript.rb.velocity = Vector3.zero;
         isPlayRunning = false;
+
+        // Randomly choose the options for each button position
+        RandomizeModButtons();
     }
 
     public void HalfTimeOver()
@@ -157,6 +172,71 @@ public class LevelManager : MonoBehaviour
         halftimeWindow.SetActive(false);
         characterMoveScript.enabled = true;
         throwFlagScript.enabled = true;
+    }
+
+    void RandomizeModButtons()
+    {
+        // Iterate through each button position
+        for (int i = 1; i <= 3; i++)
+        {
+            // Randomly choose between the two options for the current button position
+            bool option1 = Random.Range(0, 2) == 0;
+
+            // Get buttons
+            GameObject button1 = GameObject.Find("Modifier" + i);
+            GameObject button2 = GameObject.Find("Modifier" + i + ".1");
+
+            // Set the active button
+            button1.SetActive(option1);
+            // Set not active button
+            button2.SetActive(!option1);
+        }
+    }
+
+    // Modifiers
+    public void IncreasePlayerSpeedDecreaseStamina()
+    {
+        // Increase player speed
+        characterMoveScript.moveSpeed = 5;
+
+        // Decrease player stamina
+        staminaScript.totalStamina = 90;
+    }
+
+    public void IncreaseStaminaDecreasePlayerSpeed()
+    {
+        // Increase player stamina
+        staminaScript.totalStamina = 120;
+
+        // Decrease player speed
+        characterMoveScript.moveSpeed = 3;
+    }
+
+    public void DecreaseSuspicionForFalseFouls()
+    {
+        // Decrease suspicion for false fouls
+        SuspicionChecks.ModifySuspicionIncAmount(15f);
+    }
+
+    public void IncreaseSuspicionForTrueFouls()
+    {
+        // Increase suspicion for true fouls
+        SuspicionChecks.ModifySuspicionDecAmount(20f);
+    }
+
+    public void AddTimeToTimer()
+    {
+        // Add time to the timer
+        currentTime += 10;
+        DisplayTime(currentTime);
+    }
+
+    public void AddExtraPointsToScore()
+    {
+        // Add extra points to the team's score
+        homeScore += 7;
+        // Update UI
+        homeScoreText.text = homeScore.ToString();
     }
 
     public void ClearFlags()
@@ -168,5 +248,4 @@ public class LevelManager : MonoBehaviour
             Destroy(flag);
         }
     }
-
 }
