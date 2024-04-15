@@ -27,7 +27,7 @@ public class CharacterStamina : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift) && stamina > 0 && !isOutOfBreath)
             {
                 CharacterMovement.isRunning = true;
-                stamina -= staminaDcrRate;
+                stamina -= staminaDcrRate * Time.deltaTime;
 
                 // If stamina reaches 0 then player is out of breath and cannot sprint 
                 // until stamina refills
@@ -58,7 +58,7 @@ public class CharacterStamina : MonoBehaviour
         // Recharges stamina after catching breath
         else if (isOutOfBreath && !Input.GetKey(KeyCode.LeftShift))
         {
-            stamina += staminaIncRate;
+            stamina += staminaIncRate * Time.deltaTime;
             //Debug.Log("Recharging stamina after catching breath.");
         }
         else if (isOutOfBreath && Input.GetKey(KeyCode.LeftShift))
@@ -77,7 +77,7 @@ public class CharacterStamina : MonoBehaviour
         // Reduce stamina bar
         if (staminaBar != null)
         {
-            staminaBar.value = stamina / totalStamina;
+            staminaBar.value = stamina / totalStamina ;
         }
     }
 
