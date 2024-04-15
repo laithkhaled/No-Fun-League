@@ -5,10 +5,19 @@ public class QuarterbackController : MonoBehaviour
 {
     public GameObject[] receivers; 
     public GameObject footballPrefab; 
+    private PlayerController playerController;
+
+    void Start()
+    {
+        playerController = GetComponent<PlayerController>();
+        if (playerController != null) {
+            playerController.hasBall = true;
+        }
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && playerController.hasBall)
         {
             StartCoroutine(ThrowFootball());
         }
@@ -26,8 +35,9 @@ public class QuarterbackController : MonoBehaviour
             GameObject targetReceiver = receivers[index];
             Debug.Log("Receiver Chosen: " + targetReceiver.name);
             Vector3 throwDirection = (targetReceiver.transform.position - transform.position).normalized;
-            float throwForce = 1000;
+            float throwForce = 900;
             footballInstance.GetComponent<Rigidbody2D>().AddForce(throwDirection * throwForce);
+            playerController.hasBall = false;  
         }
 
         yield return null;
