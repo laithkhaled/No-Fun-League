@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = (endZoneTarget.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
         animator.SetBool("getsBall", false);
-        animator.SetBool("runningBall", true);
+        animator.SetBool("isRunningBall", true);
     }
 
     public void StopMovement()
