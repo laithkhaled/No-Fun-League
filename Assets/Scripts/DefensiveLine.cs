@@ -13,16 +13,11 @@ public class DefensiveLine : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        int offensiveLinemanStrength = Random.Range(1, 21);
-        int defensiveLinemanStrength = Random.Range(1, 21);
-
-        if (collider.gameObject.CompareTag("Defense") && offensiveLinemanStrength >= defensiveLinemanStrength)
+        // Check if the trigger collision is with an Offensive Lineman
+        if (collider.gameObject.CompareTag("Defense"))
         {
-            DefensiveCoverage playerController = collider.gameObject.GetComponent<DefensiveCoverage>();
-            if (playerController != null)
-            {
-                playerController.StopMovement(); 
-            }
+            DefensiveCoverage playerController = collider.GetComponent<DefensiveCoverage>();
+            playerController.StopMovement(); // Call the method to handle getting tackled
         }
     }
 }

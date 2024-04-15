@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,13 +7,9 @@ public class PlayerController : MonoBehaviour
     private Transform endZoneTarget = null;
     private bool isMoving = false; 
     public bool isTackled = false;
-<<<<<<< Updated upstream
 
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-=======
-    public static event Action<Vector3> OnPlayerTackled;
->>>>>>> Stashed changes
 
     void Start()
     {
@@ -44,14 +38,9 @@ public class PlayerController : MonoBehaviour
     private void MoveTowardsEndZone()
     {
         Vector3 direction = (endZoneTarget.position - transform.position).normalized;
-<<<<<<< Updated upstream
         transform.position += direction * speed * Time.deltaTime;
         animator.SetBool("getsBall", false);
         animator.SetBool("runningBall", true);
-=======
-        float runSpeed = speed / 2;
-        transform.position += direction * runSpeed * Time.deltaTime;
->>>>>>> Stashed changes
     }
 
     public void StopMovement()
@@ -78,7 +67,6 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log("Player is tackled");
         Debug.Log(isTackled);
-        OnPlayerTackled(transform.position);
     }
 
     public void CatchBall()
