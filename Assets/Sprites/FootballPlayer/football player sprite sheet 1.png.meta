@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21ee7b563fb39c240b6ca9e0a3a04d9f
+guid: d17524d1c55d0cc46b7915fb78d2f5d9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: football player sprite sheet_0
+      name: football player sprite sheet 1_0
       rect:
         serializedVersion: 2
         x: 43
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f642adc6a45a4fc40b5c7218609b47dd
-      internalID: -541453401
+      spriteID: 2c613d6101a6ed1429ddea75ed6b7986
+      internalID: 305709134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_1
+      name: football player sprite sheet 1_1
       rect:
         serializedVersion: 2
         x: 157
@@ -140,17 +140,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a3d2f0d076dc41458b3a8d8e071e1c8
-      internalID: 1342640149
+      spriteID: 0279209c9bf44274097aae6eab880739
+      internalID: -684327573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_2
+      name: football player sprite sheet 1_2
       rect:
         serializedVersion: 2
-        x: 284
+        x: 290
         y: 658
         width: 72
         height: 148
@@ -161,17 +161,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03907f956dff4aa4cb776316ff7e8324
-      internalID: 1303667797
+      spriteID: 9b78e93b40125af4eaf2f3ff444c0e7c
+      internalID: -1470209373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_3
+      name: football player sprite sheet 1_3
       rect:
         serializedVersion: 2
-        x: 386
+        x: 411
         y: 659
         width: 100
         height: 147
@@ -182,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0a985b3801062b47aeb55c8fc190bc3
-      internalID: 412389383
+      spriteID: ed74d20d4d119994aa8f8e40a64d0681
+      internalID: -1713296982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_4
+      name: football player sprite sheet 1_4
       rect:
         serializedVersion: 2
         x: 32
         y: 502
-        width: 97
+        width: 103
         height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,17 +203,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1af830b643d894a4b98c022cdad5691f
-      internalID: -2104995861
+      spriteID: e87d560f1a37fef46bf3f180a3d9db84
+      internalID: -1397428925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_5
+      name: football player sprite sheet 1_5
       rect:
         serializedVersion: 2
-        x: 129
+        x: 143
         y: 500
         width: 148
         height: 127
@@ -224,14 +224,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48875d9ad9c36d3419fb182ccf75bdd4
-      internalID: 1134344648
+      spriteID: c3ffd0bba49e1b04ca37c027dce1faa0
+      internalID: 1294168183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_6
+      name: football player sprite sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 486
+        width: 87
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970273cb93127284a97814c4268aaa56
+      internalID: -1040801124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: football player sprite sheet 1_7
       rect:
         serializedVersion: 2
         x: 4
@@ -245,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475d076bfe58f304b977e6044dd6d36a
-      internalID: -1536108720
+      spriteID: 44445334d90615241b20c3a6839a387a
+      internalID: 805259436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_7
+      name: football player sprite sheet 1_8
       rect:
         serializedVersion: 2
         x: 158
@@ -266,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e73c3104a00d84e9aa2458abeae20b
-      internalID: 824902179
+      spriteID: 53310e53fd26d704e848fc56de487662
+      internalID: 803093333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_8
+      name: football player sprite sheet 1_9
       rect:
         serializedVersion: 2
         x: 333
@@ -287,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3ccd52c005d77b44832a890af89783b
-      internalID: 1246472561
+      spriteID: 5cb674223ace7d4418ac6190338efaba
+      internalID: 1938097484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_9
+      name: football player sprite sheet 1_10
       rect:
         serializedVersion: 2
         x: 21
@@ -308,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84cd1b87da45c044b91eef2068e6b7ee
-      internalID: -848653292
+      spriteID: 3ce923f1f523d3f4f963fd9afcb56209
+      internalID: -1558346796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: football player sprite sheet_10
+      name: football player sprite sheet 1_11
       rect:
         serializedVersion: 2
         x: 183
@@ -329,8 +350,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a98037712d9c5a4e81fa16447f299aa
-      internalID: -968006819
+      spriteID: 8ebc2e8c9bcd884438f8c53e40fa5135
+      internalID: -1106443358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: football player sprite sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 10
+        width: 79
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5aacbf7f9e231340b3143ddaa4edd33
+      internalID: 2142342171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: football player sprite sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 10
+        width: 142
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2370c37192d438947a20c3964561b5c4
+      internalID: 1940599220
       vertices: []
       indices: 
       edges: []
@@ -346,17 +409,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      football player sprite sheet_0: -541453401
-      football player sprite sheet_1: 1342640149
-      football player sprite sheet_10: -968006819
-      football player sprite sheet_2: 1303667797
-      football player sprite sheet_3: 412389383
-      football player sprite sheet_4: -2104995861
-      football player sprite sheet_5: 1134344648
-      football player sprite sheet_6: -1536108720
-      football player sprite sheet_7: 824902179
-      football player sprite sheet_8: 1246472561
-      football player sprite sheet_9: -848653292
+      football player sprite sheet 1_0: 305709134
+      football player sprite sheet 1_1: -684327573
+      football player sprite sheet 1_10: -1558346796
+      football player sprite sheet 1_11: -1106443358
+      football player sprite sheet 1_12: 2142342171
+      football player sprite sheet 1_13: 1940599220
+      football player sprite sheet 1_2: -1470209373
+      football player sprite sheet 1_3: -1713296982
+      football player sprite sheet 1_4: -1397428925
+      football player sprite sheet 1_5: 1294168183
+      football player sprite sheet 1_6: -1040801124
+      football player sprite sheet 1_7: 805259436
+      football player sprite sheet 1_8: 803093333
+      football player sprite sheet 1_9: 1938097484
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
