@@ -5,7 +5,7 @@ public class SuspicionChecks : MonoBehaviour
 {
     static float totalSuspicion = 100f;
     static float suspicion;
-    static public float suspicionIncAmount, suspicionDecAmount;
+    static public float suspicionIncAmount = 25, suspicionDecAmount = 10;
     private bool suspicionTriggered = false;
 
     static Slider suspicionSlider;
