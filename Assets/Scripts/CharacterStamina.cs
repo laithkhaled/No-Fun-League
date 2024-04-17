@@ -68,7 +68,7 @@ public class CharacterStamina : MonoBehaviour
         // Otherwise, passively regenerate stamina if not full
         else if (!isOutOfBreath && stamina != totalStamina && !Input.GetKey(KeyCode.LeftShift))
         {
-            stamina += staminaIncRate * 0.40f;
+            stamina += staminaIncRate * 0.40f * Time.deltaTime;
         }
 
         // Stamina stays in range of 0 - totalStamina
@@ -83,6 +83,6 @@ public class CharacterStamina : MonoBehaviour
 
     void CatchBreath()
     {
-        stamina += staminaIncRate;
+        stamina += staminaIncRate * Time.deltaTime;
     }
 }

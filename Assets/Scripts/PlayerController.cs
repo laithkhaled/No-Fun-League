@@ -15,11 +15,14 @@ public class PlayerController : MonoBehaviour
 
     public static event Action<Vector3> OnPlayerTackled;
 
+    private Vector3 previousPosition;
+
     void Start()
     {
         FindEndZoneTarget();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        previousPosition = transform.position;
     }
 
     void Update()
@@ -28,6 +31,21 @@ public class PlayerController : MonoBehaviour
         {
             MoveTowardsEndZone();
         }
+
+        UpdateAnimatorSpeed();
+    }
+
+    private void UpdateAnimatorSpeed()
+    {
+        // Calculate velocity based on change in position
+        Vector3 velocity = (transform.position - previousPosition) / Time.deltaTime;
+        float playerSpeed = velocity.magnitude;
+
+        // Update animator parameter
+        animator.SetFloat("Speed", playerSpeed);
+
+        // Update previous position
+        previousPosition = transform.position;
     }
 
     private void FindEndZoneTarget()
@@ -45,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
         float runSpeed = speed / 2;
         transform.position += direction * runSpeed * Time.deltaTime;
+
         animator.SetBool("getsBall", false);
         animator.SetBool("isRunningBall", true);
     }
