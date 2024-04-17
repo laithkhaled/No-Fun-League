@@ -43,7 +43,7 @@ public class DefensiveChaseController : MonoBehaviour
     {
         if (ballCarrier != null)
         {
-            float chaseSpeed = speed * 1.1f; // Chase at 110% of the ball carrier's speed
+            float chaseSpeed = speed * 1.2f; // Chase at 110% of the ball carrier's speed
 
             // Calculate direction towards the ball carrier
             Vector2 direction = (ballCarrier.transform.position - transform.position).normalized;

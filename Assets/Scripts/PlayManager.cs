@@ -146,7 +146,7 @@ public class PlayManager : MonoBehaviour
         LineB2.transform.position = defenseParent.Find("LB2").position;
     }
 
-    void RandomFormation()
+    public void RandomFormation()
     {
         // Call random formation
         int formationChoice = Random.Range(1, 3);

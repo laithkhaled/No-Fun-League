@@ -3,35 +3,78 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-   private int downCount = 1;
-   private int maxDownCount = 4; // Maximum value for down count
+    private int downCount = 1;
+    private int maxDownCount = 4; // Maximum value for down count
+    public TextMeshProUGUI downCountText; 
+    private float firstDownLineX = 0.0f; // X position of the first down line
+    private PlayManager playManager;
 
-   public TextMeshProUGUI downCountText; // Reference to the TextMeshProUGUI component
+    void Start()
+    {
+        UpdateDownCountText();
+        InitializeFirstDownLine();
+        playManager = GameObject.FindObjectOfType<PlayManager>();
+    }
 
-   void Start()
-   {
-       UpdateDownCountText();
-   }
+    void InitializeFirstDownLine()
+    {
+        // Assuming the line of scrimmage starts at the position of the player or a specified object
+        GameObject lineOfScrimmage = GameObject.FindGameObjectWithTag("LineOfScrimmage");
+        if (lineOfScrimmage != null)
+        {
+            firstDownLineX = lineOfScrimmage.transform.position.x + 7.8f; // 7.8 units ahead
+        }
+    }
 
-   public void IncreaseDownCount()
-   {
-       if (downCount < maxDownCount)
-       {
-           downCount++;
-           Debug.Log("Down count increased: " + downCount);
-           UpdateDownCountText();
-       }
-       else
-       {
-           Debug.Log("Down count already at maximum value: " + downCount);
-       }
-   }
+    public float GetFirstDownLinePosition()
+    {
+        return firstDownLineX;
+    }
 
-   void UpdateDownCountText()
-   {
-       if (downCountText != null)
-       {
-           downCountText.text = "Down: " + downCount.ToString();
-       }
-   }
+    public void PlayerCrossedFirstDown()
+    {
+        // Logic when the player crosses the first down line
+        Debug.Log("Player has crossed the first down line");
+        ResetDowns();
+    }
+
+    public void IncreaseDownCount()
+    {
+        if (downCount < maxDownCount)
+        {
+            downCount++;
+            Debug.Log("Down count increased: " + downCount);
+            UpdateDownCountText();
+
+            // Delay calling RandomFormation method by 3 seconds
+            Invoke("CallRandomFormation", 4f);
+        }
+        else
+        {
+            Debug.Log("Down count already at maximum value: " + downCount);
+        }
+    }
+
+    void CallRandomFormation()
+    {
+        // Call RandomFormation method from PlayManager script
+        if (playManager != null)
+        {
+            playManager.RandomFormation();
+        }
+    }
+
+    void UpdateDownCountText()
+    {
+        if (downCountText != null)
+        {
+            downCountText.text = "Down: " + downCount.ToString();
+        }
+    }
+
+    private void ResetDowns()
+    {
+        downCount = 1; // Resets the down count
+        UpdateDownCountText(); // Update the display
+    }
 }

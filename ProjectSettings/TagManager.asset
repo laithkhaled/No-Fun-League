@@ -17,6 +17,7 @@ TagManager:
   - PassInterference
   - RoughHousing
   - Foul
+  - Bounds
   layers:
   - Default
   - TransparentFX

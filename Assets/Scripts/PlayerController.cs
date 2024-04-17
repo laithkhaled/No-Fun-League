@@ -1,13 +1,13 @@
 using UnityEngine;
-using System.Collections;
 using System;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public bool hasBall = false;
     private Transform endZoneTarget = null;
-    private bool isMoving = false; 
+    private bool isMoving = false;
     public bool isTackled = false;
 
     public Animator animator;
@@ -15,11 +15,14 @@ public class PlayerController : MonoBehaviour
 
     public static event Action<Vector3> OnPlayerTackled;
 
+    private GameManager gameManager;
+
     void Start()
     {
         FindEndZoneTarget();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -27,6 +30,7 @@ public class PlayerController : MonoBehaviour
         if (hasBall && isMoving && endZoneTarget != null)
         {
             MoveTowardsEndZone();
+            CheckFirstDownCross();
         }
     }
 
@@ -49,37 +53,42 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isRunningBall", true);
     }
 
+    private void CheckFirstDownCross()
+    {
+        if (gameManager != null && transform.position.x >= gameManager.GetFirstDownLinePosition())
+        {
+            gameManager.PlayerCrossedFirstDown();
+        }
+    }
+
     public void StopMovement()
     {
-        isMoving = false; 
+        isMoving = false;
     }
 
     public void GetTackled()
     {
-        isMoving = false; 
+        isMoving = false;
         hasBall = false;
         isTackled = true;
         StopMovement();
         animator.SetBool("isTackled", true);
-        // Find the LevelManager script 
-        LevelManager levelManager = FindObjectOfType<LevelManager>();
-        if (levelManager != null)
-        {
-            levelManager.EndPlay();
-        }
-        else
-        {
-            Debug.LogError("LevelManager not found in the scene!");
-        }
         Debug.Log("Player is tackled");
         Debug.Log(isTackled);
+
         OnPlayerTackled(transform.position);
+
+        // Inform the game manager that the player was tackled
+        if (gameManager != null)
+        {
+            gameManager.IncreaseDownCount();
+        }
     }
 
     public void CatchBall()
     {
         hasBall = true;
+        isMoving = true;
         animator.SetBool("getsBall", true);
-        isMoving = true; 
     }
 }
