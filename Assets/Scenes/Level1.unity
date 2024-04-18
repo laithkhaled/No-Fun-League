@@ -854,7 +854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116550499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.98, y: -1.94, z: 0}
+  m_LocalPosition: {x: 20.81, y: -3.41, z: 0}
   m_LocalScale: {x: 0.0871, y: 0.0871, z: 0.0871}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 156587458}
   - component: {fileID: 156587457}
   - component: {fileID: 156587463}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftE
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1056,7 +1056,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &156587461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,7 +1111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1158,7 +1157,7 @@ GameObject:
   - component: {fileID: 167851881}
   - component: {fileID: 167851880}
   - component: {fileID: 167851884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wide2
   m_TagString: Receiver
   m_Icon: {fileID: 0}
@@ -1173,7 +1172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167851877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.15, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.79, y: 2.6503599, z: 0.4898124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1498,7 +1497,7 @@ GameObject:
   - component: {fileID: 232868495}
   - component: {fileID: 232868494}
   - component: {fileID: 232868500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Safety2
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -1575,7 +1574,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1639,7 +1638,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2644,7 +2643,7 @@ GameObject:
   - component: {fileID: 485071925}
   - component: {fileID: 485071924}
   - component: {fileID: 485071930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LineB1
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -2721,7 +2720,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2785,7 +2784,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3427,7 +3426,7 @@ GameObject:
   - component: {fileID: 618128050}
   - component: {fileID: 618128049}
   - component: {fileID: 618128052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: QuarterB
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3521,7 +3520,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -6314,7 +6313,7 @@ GameObject:
   - component: {fileID: 998409848}
   - component: {fileID: 998409847}
   - component: {fileID: 998409853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CornerB3
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -6391,7 +6390,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6455,7 +6454,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6705,7 +6704,7 @@ GameObject:
   - component: {fileID: 1018179194}
   - component: {fileID: 1018179193}
   - component: {fileID: 1018179199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DTackle1
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -6782,7 +6781,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6804,7 +6803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1018179197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6860,7 +6858,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6907,7 +6905,7 @@ GameObject:
   - component: {fileID: 1029313636}
   - component: {fileID: 1029313642}
   - component: {fileID: 1029313643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftG
   m_TagString: OffensiveLineman
   m_Icon: {fileID: 0}
@@ -6946,7 +6944,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7025,7 +7023,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -7049,7 +7047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!95 &1029313643
 Animator:
   serializedVersion: 5
@@ -7729,7 +7726,7 @@ GameObject:
   - component: {fileID: 1149942218}
   - component: {fileID: 1149942224}
   - component: {fileID: 1149942225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightG
   m_TagString: OffensiveLineman
   m_Icon: {fileID: 0}
@@ -7768,7 +7765,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7868,7 +7865,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -7892,7 +7889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!95 &1149942225
 Animator:
   serializedVersion: 5
@@ -8232,7 +8228,7 @@ GameObject:
   - component: {fileID: 1181185633}
   - component: {fileID: 1181185632}
   - component: {fileID: 1181185638}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CornerB2
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -8309,7 +8305,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8373,7 +8369,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8585,7 +8581,7 @@ GameObject:
   - component: {fileID: 1194525790}
   - component: {fileID: 1194525796}
   - component: {fileID: 1194525797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightT
   m_TagString: OffensiveLineman
   m_Icon: {fileID: 0}
@@ -8624,7 +8620,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8724,7 +8720,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -8748,7 +8744,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!95 &1194525797
 Animator:
   serializedVersion: 5
@@ -9653,7 +9648,7 @@ GameObject:
   - component: {fileID: 1237521229}
   - component: {fileID: 1237521227}
   - component: {fileID: 1237521235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightE
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -9688,7 +9683,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!50 &1237521229
 Rigidbody2D:
   serializedVersion: 4
@@ -9744,7 +9738,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9808,7 +9802,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11295,7 +11289,7 @@ GameObject:
   - component: {fileID: 1426939973}
   - component: {fileID: 1426939972}
   - component: {fileID: 1426939976}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wide3
   m_TagString: Receiver
   m_Icon: {fileID: 0}
@@ -11310,7 +11304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426939969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.01, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.81, y: 2.6503599, z: 0.4898124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11455,7 +11449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1459827038}
   - component: {fileID: 1459827039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OffenseP
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -11601,7 +11595,7 @@ GameObject:
   - component: {fileID: 1464861240}
   - component: {fileID: 1464861246}
   - component: {fileID: 1464861247}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Center
   m_TagString: OffensiveLineman
   m_Icon: {fileID: 0}
@@ -11640,7 +11634,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11740,7 +11734,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -11764,7 +11758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!95 &1464861247
 Animator:
   serializedVersion: 5
@@ -12398,7 +12391,7 @@ GameObject:
   - component: {fileID: 1524179469}
   - component: {fileID: 1524179468}
   - component: {fileID: 1524179472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wide1
   m_TagString: Receiver
   m_Icon: {fileID: 0}
@@ -12413,7 +12406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524179465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.47, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.79, y: 2.6503599, z: 0.4898124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13118,7 +13111,7 @@ GameObject:
   - component: {fileID: 1645534800}
   - component: {fileID: 1645534806}
   - component: {fileID: 1645534807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftT
   m_TagString: OffensiveLineman
   m_Icon: {fileID: 0}
@@ -13157,7 +13150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -13257,7 +13250,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -13281,7 +13274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!95 &1645534807
 Animator:
   serializedVersion: 5
@@ -13566,7 +13558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678184567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DefenseP
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -13581,7 +13573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678184566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: -5.9, z: -0.4898124}
+  m_LocalPosition: {x: -1.1, y: -11.14, z: -0.4898124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13942,7 +13934,7 @@ GameObject:
   - component: {fileID: 1709659792}
   - component: {fileID: 1709659791}
   - component: {fileID: 1709659797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LineB2
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -14019,7 +14011,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14083,7 +14075,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14636,7 +14628,7 @@ GameObject:
   - component: {fileID: 1786608102}
   - component: {fileID: 1786608101}
   - component: {fileID: 1786608107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CornerB1
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -14713,7 +14705,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14777,7 +14769,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15280,7 +15272,7 @@ GameObject:
   - component: {fileID: 1840783828}
   - component: {fileID: 1840783826}
   - component: {fileID: 1840783834}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DTackle2
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -15315,7 +15307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!50 &1840783828
 Rigidbody2D:
   serializedVersion: 4
@@ -15371,7 +15362,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15435,7 +15426,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15873,7 +15864,7 @@ GameObject:
   - component: {fileID: 1942034253}
   - component: {fileID: 1942034252}
   - component: {fileID: 1942034255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RunningB
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15912,7 +15903,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15974,7 +15965,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -16097,7 +16088,7 @@ GameObject:
   - component: {fileID: 1986101029}
   - component: {fileID: 1986101028}
   - component: {fileID: 1986101034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Safety1
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -16174,7 +16165,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16238,7 +16229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16480,7 +16471,7 @@ GameObject:
   - component: {fileID: 2030206038}
   - component: {fileID: 2030206037}
   - component: {fileID: 2030206041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEnd
   m_TagString: Receiver
   m_Icon: {fileID: 0}
@@ -16548,7 +16539,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.9, y: 4.9666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16598,7 +16589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -998476463, guid: d17524d1c55d0cc46b7915fb78d2f5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

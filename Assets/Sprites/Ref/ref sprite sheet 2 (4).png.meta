@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ddfe108b467737e45ba7bc4f42b1f4f1
+guid: e773bb01277be3348a98bcb134334fdc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,12 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ref sprite sheet 2_0
+      name: ref sprite sheet 2 (4)_0
       rect:
         serializedVersion: 2
         x: 5
         y: 620
-        width: 167
+        width: 172
         height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -119,19 +119,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fee9e4247f6691241a13578827a31edf
-      internalID: 1556869715
+      spriteID: f7432f53e1222c2438d670fc7bcfa732
+      internalID: -1450293451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ref sprite sheet 2_1
+      name: ref sprite sheet 2 (4)_1
       rect:
         serializedVersion: 2
-        x: 177
+        x: 224
         y: 629
-        width: 195
+        width: 201
         height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,8 +140,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f881ce5ee6b14564cab9dbc2c4ee628c
-      internalID: -1903786387
+      spriteID: 41a9fa2e5f255504287a643e7aa62138
+      internalID: -708400620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref sprite sheet 2 (4)_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 306
+        width: 99
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c25f7690d16a2469a39a33f90cd917
+      internalID: -862399712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref sprite sheet 2 (4)_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 320
+        width: 109
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4deb9e794947684bb98f4e653fce8f9
+      internalID: 944523671
       vertices: []
       indices: 
       edges: []
@@ -157,8 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ref sprite sheet 2_0: 1556869715
-      ref sprite sheet 2_1: -1903786387
+      ref sprite sheet 2 (4)_0: -1450293451
+      ref sprite sheet 2 (4)_1: -708400620
+      ref sprite sheet 2 (4)_2: -862399712
+      ref sprite sheet 2 (4)_3: 944523671
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
