@@ -5,14 +5,20 @@ public class GameManager : MonoBehaviour
 {
     private int downCount = 1;
     private int maxDownCount = 4; // Maximum value for down count
-    public TextMeshProUGUI downCountText; 
+
+    public TextMeshProUGUI downCountText; // Reference to the TextMeshProUGUI component
+
     private float firstDownLineX = 0.0f; // X position of the first down line
+
+    // Reference to PlayManager script
     private PlayManager playManager;
 
     void Start()
     {
         UpdateDownCountText();
         InitializeFirstDownLine();
+
+        // Find and store reference to PlayManager script
         playManager = GameObject.FindObjectOfType<PlayManager>();
     }
 
@@ -47,7 +53,7 @@ public class GameManager : MonoBehaviour
             UpdateDownCountText();
 
             // Delay calling RandomFormation method by 3 seconds
-            Invoke("CallRandomFormation", 4f);
+            Invoke("CallRandomFormation", 3f);
         }
         else
         {

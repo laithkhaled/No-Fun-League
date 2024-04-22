@@ -28,6 +28,7 @@ public class FootballController : MonoBehaviour
             {
                 gameManager.IncreaseDownCount();
             }
+            Destroy(gameObject);
         }
     }
 }
