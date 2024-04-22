@@ -12,6 +12,8 @@ public class ThrowFlag : MonoBehaviour
     [SerializeField] float trajectoryTimeStep = 0.05f;
     [SerializeField] int trajectoryStepCount = 15;
 
+   // [SerializeField] AudioSoure thrownFlagSFX;
+
     Vector2 velocity, startMousePos, currentMousePos;
 
     public Animator animator;
@@ -44,17 +46,11 @@ public class ThrowFlag : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             animator.SetBool("isThrowing", false);
-            animator.SetBool("hasThrown", true);
+            //thrownFlagSFX.play();
+            animator.SetTrigger("hasThrownTrigger");
             FireProjectile();
             clearTrajectory();
-            StartCoroutine(ResetHasThrownFlag());
         }
-    }
-
-    IEnumerator ResetHasThrownFlag()
-    {
-        yield return new WaitForSeconds(0.15f); 
-        animator.SetBool("hasThrown", false);
     }
 
     // Use line renderer to show player where flag is going

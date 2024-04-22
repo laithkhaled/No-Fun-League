@@ -93,6 +93,7 @@ public class SuspicionChecks : MonoBehaviour
             if (!foulDetected)
             {
                 suspicion += suspicionIncAmount;
+                //Debug.Log(suspicion);
             }
 
             // Clamp suspicion value between 0 and totalSuspicion

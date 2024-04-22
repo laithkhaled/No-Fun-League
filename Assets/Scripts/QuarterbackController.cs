@@ -4,13 +4,16 @@ using System.Collections;
 public class QuarterbackController : MonoBehaviour
 {
     public GameObject[] receivers; 
-    public GameObject footballPrefab; 
+    public GameObject footballPrefab;
+
+    public Animator animator;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
             StartCoroutine(ThrowFootball());
+            animator = GetComponent<Animator>();
         }
     }
 
@@ -26,9 +29,13 @@ public class QuarterbackController : MonoBehaviour
             GameObject targetReceiver = receivers[index];
             Debug.Log("Receiver Chosen: " + targetReceiver.name);
             Vector3 throwDirection = (targetReceiver.transform.position - transform.position).normalized;
+            // Throw animation
+            animator.SetBool("throwBall", true);
             float throwForce = 1000;
             footballInstance.GetComponent<Rigidbody2D>().AddForce(throwDirection * throwForce);
         }
+
+        animator.SetBool("throwBall", false);
 
         yield return null;
     }

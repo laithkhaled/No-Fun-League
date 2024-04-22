@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc86d7947b13370498ea54bf846cebfe
+guid: 6b2f48f4f13c96f498193fae4eb4ec19
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: referee sprite sheet_0
+      name: referee sprite sheet (1)_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 688
-        width: 87
-        height: 119
+        x: 26
+        y: 599
+        width: 104
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8d4f6f55e730c542bdd8b1cebb34be4
-      internalID: -2113379032
+      spriteID: 5c6f5d12c58f4d647ad1f3eb8dca1927
+      internalID: -308840866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: referee sprite sheet_1
+      name: referee sprite sheet (1)_1
       rect:
         serializedVersion: 2
-        x: 121
-        y: 690
-        width: 139
-        height: 98
+        x: 167
+        y: 595
+        width: 97
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c9c1df252ef2c4190f7ecff0c991aa
-      internalID: -618119848
+      spriteID: 03e2bf169078fff4b8bdf713e14cef6a
+      internalID: -1290398648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: referee sprite sheet_2
+      name: referee sprite sheet (1)_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 545
-        width: 84
-        height: 131
+        x: 306
+        y: 593
+        width: 111
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a9d8a24a0c144e429b5ee5cda5bcd7d
-      internalID: -2041659826
+      spriteID: 2450af4613ec79845a55cb547aaaae89
+      internalID: -1464893595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: referee sprite sheet_3
+      name: referee sprite sheet (1)_3
       rect:
         serializedVersion: 2
-        x: 134
-        y: 545
-        width: 70
-        height: 136
+        x: 10
+        y: 350
+        width: 174
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20870234c5a00ec47adb1eae7ce6ad55
-      internalID: -580432558
+      spriteID: e174c67862b85ef449349f2ff8a747b6
+      internalID: 1193447083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: referee sprite sheet_4
+      name: referee sprite sheet (1)_4
       rect:
         serializedVersion: 2
-        x: 244
-        y: 547
-        width: 82
-        height: 134
+        x: 197
+        y: 351
+        width: 118
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7249d93504fbc464486a885d9152b737
-      internalID: -1633720282
+      spriteID: 60aa601611395af4985b00dec9512c17
+      internalID: 242650510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: referee sprite sheet_5
+      name: referee sprite sheet (1)_5
       rect:
         serializedVersion: 2
-        x: 37
-        y: 380
-        width: 60
-        height: 157
+        x: 35
+        y: 109
+        width: 101
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd68a63151c6ef9449fcfd4b7fb2dbf3
-      internalID: 413545321
+      spriteID: bd76df87d644e234fbc32f2843cb1723
+      internalID: -784695099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: referee sprite sheet_6
+      name: referee sprite sheet (1)_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 379
-        width: 62
-        height: 157
+        x: 183
+        y: 110
+        width: 92
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,92 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b85c92c63f0b2d74684576efc59a734c
-      internalID: 946588702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: referee sprite sheet_7
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 203
-        width: 178
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31dd166843a886343961b80e9be641a5
-      internalID: -1490216355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: referee sprite sheet_8
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 3
-        width: 87
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f52c98ed62afce34da7d5b38b8fc94be
-      internalID: -1519489113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: referee sprite sheet_9
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 201
-        width: 159
-        height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a94bf7223edaea4eaf0b66f1ae356dc
-      internalID: 886558008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: referee sprite sheet_10
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 2
-        width: 117
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2f965a831443e24080e9deff4a42fe2
-      internalID: -35337578
+      spriteID: 50757a4e27a128d42b1f9329cea3aa4b
+      internalID: -492286067
       vertices: []
       indices: 
       edges: []
@@ -346,17 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      referee sprite sheet_0: -2113379032
-      referee sprite sheet_1: -618119848
-      referee sprite sheet_10: -35337578
-      referee sprite sheet_2: -2041659826
-      referee sprite sheet_3: -580432558
-      referee sprite sheet_4: -1633720282
-      referee sprite sheet_5: 413545321
-      referee sprite sheet_6: 946588702
-      referee sprite sheet_7: -1490216355
-      referee sprite sheet_8: -1519489113
-      referee sprite sheet_9: 886558008
+      referee sprite sheet (1)_0: -308840866
+      referee sprite sheet (1)_1: -1290398648
+      referee sprite sheet (1)_2: -1464893595
+      referee sprite sheet (1)_3: 1193447083
+      referee sprite sheet (1)_4: 242650510
+      referee sprite sheet (1)_5: -784695099
+      referee sprite sheet (1)_6: -492286067
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
