@@ -76,15 +76,15 @@ public class DefensiveCoverage : MonoBehaviour
     }
 
     private void ChaseBallCarrier()
-{
-    if (ballCarrier != null)
     {
-        Vector3 direction = (ballCarrier.transform.position - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.position = Vector3.MoveTowards(transform.position, ballCarrier.transform.position, speed * Time.deltaTime);
+        if (ballCarrier != null)
+        {
+            Vector3 direction = (ballCarrier.transform.position - transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.position = Vector3.MoveTowards(transform.position, ballCarrier.transform.position, speed * Time.deltaTime);
+        }
     }
-}
 
     void OnCollisionEnter2D(Collision2D collision)
     {

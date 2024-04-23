@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public static bool isRunning, isThrowing;
     public float moveSpeed;
+    public float raycastDistance = 0.01f;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -33,6 +34,14 @@ public class CharacterMovement : MonoBehaviour
         else
         { 
             moveForce = PlayerInput * moveSpeed;
+        }
+
+        // Check for bounds
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, moveForce, raycastDistance);
+        if (hit.collider != null && hit.collider.tag == "Bounds")
+        {
+            // Do not let player mvoe in direction of bounds
+            moveForce = Vector2.zero;
         }
 
         rb.velocity = moveForce;

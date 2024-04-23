@@ -8,12 +8,18 @@ public class QuarterbackController : MonoBehaviour
 
     public Animator animator;
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
             StartCoroutine(ThrowFootball());
-            animator = GetComponent<Animator>();
+            // Throw animation
+            animator.SetBool("throwBall", true);
         }
     }
 
@@ -29,8 +35,6 @@ public class QuarterbackController : MonoBehaviour
             GameObject targetReceiver = receivers[index];
             Debug.Log("Receiver Chosen: " + targetReceiver.name);
             Vector3 throwDirection = (targetReceiver.transform.position - transform.position).normalized;
-            // Throw animation
-            animator.SetBool("throwBall", true);
             float throwForce = 1000;
             footballInstance.GetComponent<Rigidbody2D>().AddForce(throwDirection * throwForce);
         }

@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
             StartTimer();
             isPlayRunning = true;
             throwFlagScript.enabled = true;
-            characterMoveScript.enabled = true;
+            //characterMoveScript.enabled = true;
         }
 
         if (isTimerRunning)
@@ -91,7 +91,7 @@ public class LevelManager : MonoBehaviour
         flagCallWindow.SetActive(true);
         // Player is not able to move and all velocity is stopped
         // Also cannot throw flags
-        characterMoveScript.enabled = false;
+        //characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
         characterMoveScript.rb.velocity = Vector3.zero;
 
@@ -102,7 +102,7 @@ public class LevelManager : MonoBehaviour
     public void EndPlay()
     {
         StopTimer();
-        characterMoveScript.enabled = false;
+        //characterMoveScript.enabled = false;
         throwFlagScript.enabled = false;
         characterMoveScript.rb.velocity = Vector3.zero;
 
@@ -143,9 +143,9 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void NextScene()
+    public void LevelMapScene()
     {
-        // Load next level or level map
+        SceneManager.LoadScene("LevelMap");
     }
 
     public void MainMenu()
