@@ -5,6 +5,8 @@ public class QuarterbackController : MonoBehaviour
 {
     public GameObject[] receivers; 
     public GameObject footballPrefab;
+    public GameObject RHRadiusPrefab;
+    public float duration = 8f;
 
     public Animator animator;
 
@@ -42,5 +44,18 @@ public class QuarterbackController : MonoBehaviour
         animator.SetBool("throwBall", false);
 
         yield return null;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Check if the collision is with a defensive player
+        if (collision.CompareTag("Defense"))
+        {
+            // Instantiate the RHRadiusPrefab at the current position of this GameObject
+            GameObject RHRadius = Instantiate(RHRadiusPrefab, transform.position, Quaternion.identity);
+
+            // Destroy the radius after a set time
+            Destroy(RHRadius, duration);
+        }
     }
 }

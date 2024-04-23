@@ -41,7 +41,6 @@ public class LevelManager : MonoBehaviour
             StartTimer();
             isPlayRunning = true;
             throwFlagScript.enabled = true;
-            //characterMoveScript.enabled = true;
         }
 
         if (isTimerRunning)
@@ -89,9 +88,7 @@ public class LevelManager : MonoBehaviour
     {
         StopTimer();
         flagCallWindow.SetActive(true);
-        // Player is not able to move and all velocity is stopped
-        // Also cannot throw flags
-        //characterMoveScript.enabled = false;
+        // Player cannot throw flags
         throwFlagScript.enabled = false;
         characterMoveScript.rb.velocity = Vector3.zero;
 
@@ -102,7 +99,7 @@ public class LevelManager : MonoBehaviour
     public void EndPlay()
     {
         StopTimer();
-        //characterMoveScript.enabled = false;
+        // Player cannot throw flags
         throwFlagScript.enabled = false;
         characterMoveScript.rb.velocity = Vector3.zero;
 
@@ -155,6 +152,8 @@ public class LevelManager : MonoBehaviour
 
     void ShowHalftimeScreen()
     {
+        ClearFlags();
+        ClearFouls();
         halftimeWindow.SetActive(true);
         // Player is not able to move and all velocity is stopped
         // Also cannot throw flags
@@ -246,6 +245,25 @@ public class LevelManager : MonoBehaviour
         foreach (GameObject flag in flags)
         {
             Destroy(flag);
+        }
+    }
+
+    public void ClearFouls()
+    {
+        // Array to hold all foul tags
+        string[] foulTags = { "PIRadius", "HoldingRadius", "RHRadius" };
+
+        // Iterate through each foul tag
+        foreach (string tag in foulTags)
+        {
+            // Find all game objects with the current foul tag
+            GameObject[] fouls = GameObject.FindGameObjectsWithTag(tag);
+
+            // Destroy each found game object
+            foreach (GameObject foul in fouls)
+            {
+                Destroy(foul);
+            }
         }
     }
 }

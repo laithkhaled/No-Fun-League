@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
             downCount++;
             Debug.Log("Down count increased: " + downCount);
             UpdateDownCountText();
+            CallRandomFormation();
 
             // Delay calling RandomFormation method by 3 seconds
             Invoke("CallRandomFormation", 3f);
