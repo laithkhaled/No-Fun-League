@@ -1086,7 +1086,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.14, y: 1.51}
+  m_Size: {x: 17.58, y: 11.63}
   m_EdgeRadius: 0
 --- !u!114 &116550501
 MonoBehaviour:
@@ -1181,7 +1181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116550499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.06, y: -3.41, z: -0.01}
+  m_LocalPosition: {x: 21.06, y: -3.41, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.0871}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1325,6 +1325,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &121872114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1529,14 +1530,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156587453}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1559,6 +1560,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &156587459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1799,7 +1801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167851877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.79, y: 2.6503599, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1837,6 +1839,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &167851882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1861,7 +1864,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &167851883
 SpriteRenderer:
@@ -2244,6 +2247,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &232868496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2895,6 +2899,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &316484159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3236,6 +3241,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &329304262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4448,6 +4454,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &476634187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,6 +4596,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &485071926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4923,6 +4931,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &541566716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5556,6 +5565,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &572939534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6074,6 +6084,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &631667939
 GameObject:
   m_ObjectHideFlags: 0
@@ -8529,6 +8540,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &814511900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9097,6 +9109,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &883546010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9969,6 +9982,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &922896913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10447,6 +10461,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &953713048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10620,6 +10635,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &965282651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11027,6 +11043,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &998409849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11425,14 +11442,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018179189}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11455,6 +11472,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1018179195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11811,7 +11829,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!114 &1029313639
 MonoBehaviour:
@@ -11830,6 +11848,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1029313640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12719,7 +12738,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!50 &1149942219
 Rigidbody2D:
@@ -12759,6 +12778,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1149942222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13406,6 +13426,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1181185634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13788,7 +13809,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!50 &1194525791
 Rigidbody2D:
@@ -13828,6 +13849,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1194525794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15024,14 +15046,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237521225}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -15054,6 +15076,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1237521231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16269,14 +16292,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310200760}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -16299,6 +16322,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1310200766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16826,6 +16850,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1339992243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17526,7 +17551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426939969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.81, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.81, y: 2.6503599, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17564,6 +17589,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1426939974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17588,7 +17614,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1426939975
 SpriteRenderer:
@@ -17835,6 +17861,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1455248842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18126,7 +18153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!50 &1464861241
 Rigidbody2D:
@@ -18166,6 +18193,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1464861244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19037,6 +19065,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1512932847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19336,6 +19365,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1521010513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19431,7 +19461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524179465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.79, y: 2.6503599, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19469,6 +19499,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1524179470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19493,7 +19524,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1524179471
 SpriteRenderer:
@@ -19717,14 +19748,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554504231}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -19747,6 +19778,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1554504236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20208,14 +20240,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578015554}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -20238,6 +20270,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1578015559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20635,6 +20668,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1619630132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20847,7 +20881,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!50 &1645534801
 Rigidbody2D:
@@ -20887,6 +20921,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1645534804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22169,6 +22204,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1709659793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23071,6 +23107,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1786608103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23465,14 +23502,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807705902}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -23495,6 +23532,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1807705908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23887,14 +23925,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840783824}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -23917,6 +23955,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1840783830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25116,6 +25155,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &1986101030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25454,7 +25494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030206034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8199997, y: 2.6503599, z: 0.4898124}
+  m_LocalPosition: {x: 1.8199997, y: 2.6503599, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25492,6 +25532,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &2030206039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25516,7 +25557,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &2030206040
 SpriteRenderer:

@@ -18,6 +18,7 @@ public class DefensiveCoverage : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(ballCarrier);
         FindBallCarrier(); // Always check for a ball carrier
 
         if (Input.GetKeyDown(KeyCode.F) && !isMoving)
@@ -68,6 +69,7 @@ public class DefensiveCoverage : MonoBehaviour
             {
                 if (player.GetComponent<PlayerController>().hasBall)
                 {
+                    Debug.Log("Ball carrier found: " + player.name);
                     ballCarrier = player;
                     break; // Stop searching once the ball carrier is found
                 }
@@ -81,15 +83,17 @@ public class DefensiveCoverage : MonoBehaviour
         {
             Vector3 direction = (ballCarrier.transform.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.position = Vector3.MoveTowards(transform.position, ballCarrier.transform.position, speed * Time.deltaTime);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collided with: " + collision.gameObject.name);
+
         if (collision.gameObject == ballCarrier)
         {
+            Debug.Log("Ball carrier tackled");
             ballCarrier.GetComponent<PlayerController>().GetTackled();
             ballCarrier = null;
         }

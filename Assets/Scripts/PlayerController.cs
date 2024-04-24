@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 previousPosition;
 
+    public GameManager gameManager;
+
     void Start()
     {
         FindEndZoneTarget();
@@ -82,16 +84,9 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isTackled", true);
         // Find the LevelManager script 
         LevelManager levelManager = FindObjectOfType<LevelManager>();
-        if (levelManager != null)
-        {
-            levelManager.EndPlay();
-        }
-        else
-        {
-            Debug.LogError("LevelManager not found in the scene!");
-        }
-        Debug.Log("Player is tackled");
-        Debug.Log(isTackled);
+        levelManager.EndPlay();
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.IncreaseDownCount();
         OnPlayerTackled(transform.position);
     }
 
