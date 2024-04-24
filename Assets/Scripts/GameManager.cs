@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         playManager = GameObject.FindObjectOfType<PlayManager>();
     }
 
-    void InitializeFirstDownLine()
+    public void InitializeFirstDownLine()
     {
         // Assuming the line of scrimmage starts at the position of the player or a specified object
         GameObject lineOfScrimmage = GameObject.FindGameObjectWithTag("LineOfScrimmage");
@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
             downCount++;
             Debug.Log("Down count increased: " + downCount);
             UpdateDownCountText();
-            CallRandomFormation();
-
             // Delay calling RandomFormation method by 3 seconds
             Invoke("CallRandomFormation", 3f);
         }

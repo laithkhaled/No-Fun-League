@@ -46,6 +46,7 @@ public class QuarterbackController : MonoBehaviour
         yield return null;
     }
 
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the collision is with a defensive player

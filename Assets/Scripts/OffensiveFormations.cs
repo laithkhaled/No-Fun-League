@@ -61,7 +61,7 @@ public class OffensiveFormations : MonoBehaviour
 
         //Wide2 runs slant
         MoveObject(Wide2, Vector3.right, 1f); 
-        MoveObject(Wide2, Vector3.down, 4f);
+        MoveObject(Wide2, Vector3.up, 4f);
 
         //Wide 3 runs a curl
         MoveObject(Wide3, Vector3.right, 3f);
