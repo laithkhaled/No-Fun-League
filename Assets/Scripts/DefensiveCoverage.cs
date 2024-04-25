@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using UnityEngine;
 
 public class DefensiveCoverage : MonoBehaviour
@@ -10,10 +10,16 @@ public class DefensiveCoverage : MonoBehaviour
     private Rigidbody2D rb;
     private bool isMoving = false;
 
+    // Static event to be shared across all instances of DefensiveCoverage
+    public static event Action BallCarrierTackledEvent;
+
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
+        
+        // Subscribe to the static event
+        BallCarrierTackledEvent += RespondToTackleEvent;
     }
 
     private void Update()
@@ -87,15 +93,19 @@ public class DefensiveCoverage : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Collided with: " + collision.gameObject.name);
-
+    void OnTriggerEnter2D(Collider2D collision)
+    {        
         if (collision.gameObject == ballCarrier)
         {
-            Debug.Log("Ball carrier tackled");
-            ballCarrier.GetComponent<PlayerController>().GetTackled();
-            ballCarrier = null;
+            // Invoke the static event to notify all instances that the ball carrier has been tackled
+            BallCarrierTackledEvent?.Invoke();
         }
+    }
+
+    // Method to respond to the tackle event
+    public void RespondToTackleEvent()
+    {
+        ballCarrier = null;
+        Debug.Log("Ball carrier tackled");
     }
 }

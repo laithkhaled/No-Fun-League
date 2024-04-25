@@ -26,7 +26,7 @@ public class FootballController : MonoBehaviour
             // Increase the down count when colliding with a boundary object
             if (gameManager != null)
             {
-                gameManager.IncreaseDownCount();
+                gameManager.CallRandomFormation();
             }
             Destroy(gameObject);
         }

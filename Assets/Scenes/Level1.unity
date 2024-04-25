@@ -1974,7 +1974,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1203984616}
 --- !u!61 &167851882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20853,7 +20853,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1203984616}
 --- !u!61 &1426939974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23355,7 +23355,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1203984616}
 --- !u!61 &1524179470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30930,7 +30930,7 @@ MonoBehaviour:
   isTackled: 0
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1203984616}
 --- !u!61 &2030206039
 BoxCollider2D:
   m_ObjectHideFlags: 0

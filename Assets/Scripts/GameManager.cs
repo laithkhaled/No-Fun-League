@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
             downCount++;
             Debug.Log("Down count increased: " + downCount);
             UpdateDownCountText();
-            // Delay calling RandomFormation method by 3 seconds
-            Invoke("CallRandomFormation", 3f);
         }
         else
         {
@@ -60,13 +58,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void CallRandomFormation()
+    public void CallRandomFormation()
     {
-        // Call RandomFormation method from PlayManager script
-        if (playManager != null)
-        {
-            playManager.RandomFormation();
-        }
+        IncreaseDownCount();
+        playManager.RandomFormation();
     }
 
     void UpdateDownCountText()

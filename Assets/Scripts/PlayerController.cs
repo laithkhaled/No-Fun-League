@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
+    
+
     void Start()
     {
         FindEndZoneTarget();
@@ -86,8 +88,13 @@ public class PlayerController : MonoBehaviour
         LevelManager levelManager = FindObjectOfType<LevelManager>();
         levelManager.EndPlay();
         GameManager gameManager = FindObjectOfType<GameManager>();
-        gameManager.IncreaseDownCount();
+        Invoke("CallRandomFormationWithDelay", 0f);
         OnPlayerTackled(transform.position);
+    }
+
+    void CallRandomFormationWithDelay()
+    {
+        gameManager.CallRandomFormation();
     }
 
     public void CatchBall()
