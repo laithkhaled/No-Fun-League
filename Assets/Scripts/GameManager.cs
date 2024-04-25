@@ -23,19 +23,31 @@ public class GameManager : MonoBehaviour
     }
 
     public void InitializeFirstDownLine()
+{
+    // Assuming the first down line object is tagged as "FirstDownLine"
+    GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
+    if (firstDownLine != null)
     {
         // Assuming the line of scrimmage starts at the position of the player or a specified object
         GameObject lineOfScrimmage = GameObject.FindGameObjectWithTag("LineOfScrimmage");
         if (lineOfScrimmage != null)
         {
+            Debug.Log("Line of Scrimmage position: " + lineOfScrimmage.transform.position);
             firstDownLineX = lineOfScrimmage.transform.position.x + 7.8f; // 7.8 units ahead
+            Vector3 newPosition = new Vector3(firstDownLineX, firstDownLine.transform.position.y, firstDownLine.transform.position.z);
+            firstDownLine.transform.position = newPosition;
+            Debug.Log("First Down Line X position: " + firstDownLineX);
+        }
+        else
+        {
+            Debug.LogError("Line of Scrimmage not found or tagged incorrectly!");
         }
     }
-
-    public float GetFirstDownLinePosition()
+    else
     {
-        return firstDownLineX;
+        Debug.LogError("First down line object not found or tagged incorrectly!");
     }
+}
 
     public void PlayerCrossedFirstDown()
     {
@@ -72,9 +84,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ResetDowns()
+    public void ResetDowns()
+{
+    if (downCount == 1)
     {
-        downCount = 1; // Resets the down count
-        UpdateDownCountText(); // Update the display
+        // Teleport the first down line object 7.8 units ahead
+        GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
+        if (firstDownLine != null)
+        {
+            Vector3 newPosition = new Vector3(firstDownLineX, firstDownLine.transform.position.y, firstDownLine.transform.position.z);
+            firstDownLine.transform.position = newPosition;
+            Debug.Log("First down line teleported to: " + newPosition);
+        }
+        else
+        {
+            Debug.LogError("First down line object not found or tagged incorrectly!");
+        }
     }
+    
+    downCount = 1; // Resets the down count
+    UpdateDownCountText(); // Update the display
+}
 }

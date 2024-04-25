@@ -24,7 +24,6 @@ public class DefensiveCoverage : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(ballCarrier);
         FindBallCarrier(); // Always check for a ball carrier
 
         if (Input.GetKeyDown(KeyCode.F) && !isMoving)
@@ -75,7 +74,6 @@ public class DefensiveCoverage : MonoBehaviour
             {
                 if (player.GetComponent<PlayerController>().hasBall)
                 {
-                    Debug.Log("Ball carrier found: " + player.name);
                     ballCarrier = player;
                     break; // Stop searching once the ball carrier is found
                 }
@@ -106,6 +104,5 @@ public class DefensiveCoverage : MonoBehaviour
     public void RespondToTackleEvent()
     {
         ballCarrier = null;
-        Debug.Log("Ball carrier tackled");
     }
 }

@@ -79,7 +79,6 @@ public class PlayerController : MonoBehaviour
 
     public void GetTackled()
     {
-        isMoving = false; 
         hasBall = false;
         isTackled = true;
         StopMovement();
@@ -88,12 +87,13 @@ public class PlayerController : MonoBehaviour
         LevelManager levelManager = FindObjectOfType<LevelManager>();
         levelManager.EndPlay();
         GameManager gameManager = FindObjectOfType<GameManager>();
-        Invoke("CallRandomFormationWithDelay", 0f);
+        Invoke("CallRandomFormationWithDelay", 4.5f);
         OnPlayerTackled(transform.position);
     }
 
     void CallRandomFormationWithDelay()
     {
+        isTackled = false;
         gameManager.CallRandomFormation();
     }
 

@@ -26,9 +26,14 @@ public class FootballController : MonoBehaviour
             // Increase the down count when colliding with a boundary object
             if (gameManager != null)
             {
-                gameManager.CallRandomFormation();
+                Invoke("DelayRandomFormation", 4.5f);
             }
             Destroy(gameObject);
         }
+    }
+
+    void DelayRandomFormation()
+    {
+        gameManager.CallRandomFormation();
     }
 }
