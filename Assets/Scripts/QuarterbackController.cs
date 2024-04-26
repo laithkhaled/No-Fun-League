@@ -3,10 +3,11 @@ using System.Collections;
 
 public class QuarterbackController : MonoBehaviour
 {
-    public GameObject[] receivers; 
+    public GameObject[] receivers;
     public GameObject footballPrefab;
     public GameObject RHRadiusPrefab;
-    public float duration = 8f;
+    float duration = 6f;
+    private bool radiusSpawned = false;
 
     public Animator animator;
 
@@ -28,7 +29,7 @@ public class QuarterbackController : MonoBehaviour
     IEnumerator ThrowFootball()
     {
         GameObject footballInstance = Instantiate(footballPrefab, transform.position, Quaternion.identity);
-        footballInstance.transform.SetParent(transform); 
+        footballInstance.transform.SetParent(transform);
 
         if (receivers.Length > 0)
         {
@@ -49,14 +50,22 @@ public class QuarterbackController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the collision is with a defensive player
-        if (collision.CompareTag("Defense"))
+        // Check if the collision is with a defensive player and RHRadiusPrefab has not been spawned yet
+        if (collision.CompareTag("Defense") && !radiusSpawned)
         {
             // Instantiate the RHRadiusPrefab at the current position of this GameObject
             GameObject RHRadius = Instantiate(RHRadiusPrefab, transform.position, Quaternion.identity);
+            // Debug.Log("RHRadius spawned.");
 
             // Destroy the radius after a set time
             Destroy(RHRadius, duration);
+
+            radiusSpawned = true;
         }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        radiusSpawned = false;
     }
 }
