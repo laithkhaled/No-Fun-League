@@ -18,6 +18,7 @@ TagManager:
   - RoughHousing
   - Foul
   - Bounds
+  - FirstDownLine
   layers:
   - Default
   - TransparentFX
