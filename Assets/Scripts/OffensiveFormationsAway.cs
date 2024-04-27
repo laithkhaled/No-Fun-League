@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OffensiveFormations : MonoBehaviour
+public class OffensiveFormationsAway : MonoBehaviour
 {
     public GameObject Wide1;
     public GameObject Wide2;
@@ -60,8 +60,8 @@ public class OffensiveFormations : MonoBehaviour
         MoveObject(Wide1, Vector3.right, 5f); 
 
         //Wide2 runs slant
-        MoveObject(Wide2, Vector3.right, 1.5f); 
-        MoveObject(Wide2, Vector3.up, 3.5f);
+        MoveObject(Wide2, Vector3.right, 1f); 
+        MoveObject(Wide2, Vector3.up, 4f);
 
         //Wide 3 runs a curl
         MoveObject(Wide3, Vector3.right, 3f);
@@ -85,10 +85,10 @@ public class OffensiveFormations : MonoBehaviour
         MoveObject(Wide1, Vector3.down, 4f);
 
         // Wide2 & 3 run drags
-        MoveObject(Wide3, Vector3.right, 2f);
-        MoveObject(Wide2, Vector3.right, 2f);
-        MoveObject(Wide3, Vector3.up, 3f);
-        MoveObject(Wide2, Vector3.up, 3f);
+        MoveObject(Wide3, Vector3.right, 1f);
+        MoveObject(Wide2, Vector3.right, 1f);
+        MoveObject(Wide3, Vector3.up, 4f);
+        MoveObject(Wide2, Vector3.up, 4f);
 
         //TEnd Runs a vertical
         MoveObject(TEnd, Vector3.right, 5f);

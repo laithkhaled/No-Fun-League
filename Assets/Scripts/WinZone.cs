@@ -8,31 +8,41 @@ public class WinZone : MonoBehaviour
 {
     public GameObject team;
     private int score = 0;
-    private bool scored = false;
     public TMP_Text scoreText;
+    bool scored = false;
 
     void Start()
     {
         UpdateScoreUI();
     }
 
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        foreach (Transform child in team.transform)
+        Debug.Log("OnTriggerEnter called");
+        
+        if (other.CompareTag("Receiver"))
         {
-            // For testing 
-            if (!child.gameObject.activeSelf)
+            Debug.Log("Object is a receiver");
+            
+            // Check if the entering object has a child named "Football(Clone)"
+            bool hasFootball = false;
+            foreach (Transform child in other.transform)
             {
-                continue;
+                if (child.name == "Football(Clone)")
+                {
+                    hasFootball = true;
+                    break;
+                }
             }
 
-            // If player has football in correct endzone and no team has scored for this play
-            // Scored check is to make sure score is updated once per play
-            if (child.Find("Football") != null && !scored)
+            if (hasFootball && !scored)
             {
+                Debug.Log("Player has football and has not scored yet");
+                
+                // Increment the score when a player with the football enters the trigger area
                 score += 7;
-                scored = true;
                 UpdateScoreUI();
+                scored = true; // Set scored to true to prevent multiple score increments in the same play
             }
         }
     }
@@ -42,15 +52,16 @@ public class WinZone : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    // Will allow teams to score after play gets reset
-    // When player with football leaves endzone, then scored is set to false to allow scoring again
+    // Will reset the scored flag when the player with football leaves the endzone
     void OnTriggerExit(Collider other)
     {
-        // Check if the exiting object is tagged as "Player" and if it has the football child object
-        if (other.transform.Find("Football") != null && scored)
+        Debug.Log("OnTriggerExit called");
+        
+        if (other.transform.Find("Football(Clone)") != null)
         {
-            // Reset the scored flag
-            scored = false;
+            Debug.Log("Football exited the trigger");
+            
+            scored = false; // Reset the scored flag
         }
     }
 }

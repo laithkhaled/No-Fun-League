@@ -21,19 +21,16 @@ public class FootballController : MonoBehaviour
             // Call CatchBall on the receiver's PlayerController script
             collision.gameObject.GetComponent<PlayerController>()?.CatchBall();
         }
-        else if (collision.gameObject.CompareTag("Bounds"))
+        if (collision.gameObject.CompareTag("Bounds"))
         {
-            // Increase the down count when colliding with a boundary object
-            if (gameManager != null)
-            {
-                Invoke("DelayRandomFormation", 4.5f);
-            }
+            Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
+            Invoke("DelayRandomFormation", 4.5f);
             Destroy(gameObject);
         }
     }
 
     void DelayRandomFormation()
     {
-        gameManager.CallRandomFormation();
+        gameManager.CallRandomFormationBoth();
     }
 }

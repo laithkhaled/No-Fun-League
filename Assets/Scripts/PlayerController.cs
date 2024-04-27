@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
     void CallRandomFormationWithDelay()
     {
         isTackled = false;
-        gameManager.CallRandomFormation();
+        gameManager.CallRandomFormationBoth();
     }
 
     public void CatchBall()

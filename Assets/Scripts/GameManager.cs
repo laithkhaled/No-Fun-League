@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
     // Reference to PlayManager script
     private PlayManager playManager;
 
+    public GameObject lineOfScrimmage;
+    public GameObject lineOfScrimmageAway;
+
+    public PlayManagerAway playManagerAway;
+
     void Start()
     {
         UpdateDownCountText();
@@ -23,30 +28,46 @@ public class GameManager : MonoBehaviour
     }
 
     public void InitializeFirstDownLine()
-{
-    // Assuming the first down line object is tagged as "FirstDownLine"
-    GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
-    if (firstDownLine != null)
     {
-        // Assuming the line of scrimmage starts at the position of the player or a specified object
-        GameObject lineOfScrimmage = GameObject.FindGameObjectWithTag("LineOfScrimmage");
-        if (lineOfScrimmage != null)
+        // Assuming the first down line object is tagged as "FirstDownLine"
+        GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
+        if (firstDownLine != null)
         {
-            Debug.Log("Line of Scrimmage position: " + lineOfScrimmage.transform.position);
-            firstDownLineX = lineOfScrimmage.transform.position.x + 7.8f; // 7.8 units ahead
-            Vector3 newPosition = new Vector3(firstDownLineX, firstDownLine.transform.position.y, firstDownLine.transform.position.z);
-            firstDownLine.transform.position = newPosition;
-            Debug.Log("First Down Line X position: " + firstDownLineX);
+            // Assuming the line of scrimmage starts at the position of the player or a specified object
+            GameObject lineOfScrimmage = GameObject.FindGameObjectWithTag("LineOfScrimmage");
+            if (lineOfScrimmage != null)
+            {
+                Debug.Log("Line of Scrimmage position: " + lineOfScrimmage.transform.position);
+                firstDownLineX = lineOfScrimmage.transform.position.x + 7.8f; // 7.8 units ahead
+                Vector3 newPosition = new Vector3(firstDownLineX, firstDownLine.transform.position.y, firstDownLine.transform.position.z);
+                firstDownLine.transform.position = newPosition;
+                Debug.Log("First Down Line X position: " + firstDownLineX);
+            }
+            else
+            {
+                Debug.LogError("Line of Scrimmage not found or tagged incorrectly!");
+            }
         }
         else
         {
-            Debug.LogError("Line of Scrimmage not found or tagged incorrectly!");
+            Debug.LogError("First down line object not found or tagged incorrectly!");
         }
     }
-    else
+
+    void SwapLineOfScrimmage()
+{
+    if (lineOfScrimmage == null || lineOfScrimmageAway == null)
     {
-        Debug.LogError("First down line object not found or tagged incorrectly!");
+        Debug.LogError("One of the Line of Scrimmage objects is not assigned.");
+        return;
     }
+
+    // Swap positions
+    Vector3 tempPosition = lineOfScrimmage.transform.position;
+    lineOfScrimmage.transform.position = lineOfScrimmageAway.transform.position;
+    lineOfScrimmageAway.transform.position = tempPosition;
+
+    Debug.Log("Swapped positions of LineOfScrimmage and LineOfScrimmage_Away.");
 }
 
     public void PlayerCrossedFirstDown()
@@ -57,24 +78,36 @@ public class GameManager : MonoBehaviour
     }
 
     public void IncreaseDownCount()
+{
+    if (downCount < maxDownCount)
     {
-        if (downCount < maxDownCount)
-        {
-            downCount++;
-            Debug.Log("Down count increased: " + downCount);
-            UpdateDownCountText();
-        }
-        else
-        {
-            Debug.Log("Down count already at maximum value: " + downCount);
-        }
+        downCount++;
+        Debug.Log("Down count increased: " + downCount);
+        UpdateDownCountText();
     }
+    else
+    {
+        Debug.Log("Maximum down count reached, swapping positions.");
+        SwapLineOfScrimmage();
+        ResetDowns();
+        CallRandomFormationBoth();
+    }
+}
 
-    public void CallRandomFormation()
+    public void CallRandomFormationBoth()
+{
+    if (playManager != null && playManagerAway != null)
     {
-        IncreaseDownCount();
         playManager.RandomFormation();
+        playManagerAway.RandomFormation();
+        IncreaseDownCount();
+        Debug.Log("Called RandomFormation on both PlayManager and PlayManagerAway.");
     }
+    else
+    {
+        Debug.LogError("One of the PlayManagers is not assigned.");
+    }
+}
 
     void UpdateDownCountText()
     {
@@ -85,24 +118,35 @@ public class GameManager : MonoBehaviour
     }
 
     public void ResetDowns()
-{
-    if (downCount == 1)
     {
-        // Teleport the first down line object 7.8 units ahead
-        GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
-        if (firstDownLine != null)
+        if (downCount == 1)
         {
-            Vector3 newPosition = new Vector3(firstDownLineX, firstDownLine.transform.position.y, firstDownLine.transform.position.z);
-            firstDownLine.transform.position = newPosition;
-            Debug.Log("First down line teleported to: " + newPosition);
+            // Teleport the first down line object 7.8 units ahead
+            GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
+            if (firstDownLine != null)
+            {
+                Vector3 newPosition = new Vector3(firstDownLineX, firstDownLine.transform.position.y, firstDownLine.transform.position.z);
+                firstDownLine.transform.position = newPosition;
+                Debug.Log("First down line teleported to: " + newPosition);
+            }
+            else
+            {
+                Debug.LogError("First down line object not found or tagged incorrectly!");
+            }
         }
-        else
-        {
-            Debug.LogError("First down line object not found or tagged incorrectly!");
-        }
-    }
     
-    downCount = 1; // Resets the down count
-    UpdateDownCountText(); // Update the display
-}
+        downCount = 1; // Resets the down count
+        UpdateDownCountText(); // Update the display
+    }
+
+    public void TeleportLineOfS_Away(Vector3 position)
+    {
+        lineOfScrimmageAway.transform.position = position;
+    }
+
+    public void TeleportLineOfS(Vector3 position)
+    {   
+        lineOfScrimmage.transform.position = position;
+    }
+
 }
