@@ -6,27 +6,30 @@ using TMPro;
 
 public class WinZone : MonoBehaviour
 {
-    public GameObject team;
-    private int score = 0;
     public TMP_Text scoreText;
-    bool scored = false;
+    private int score = 0;
+    private bool hasScored = false; // Flag to track if the score has already been incremented
 
     void Start()
     {
         UpdateScoreUI();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter called");
-        
         if (other.CompareTag("Receiver"))
         {
-            Debug.Log("Object is a receiver");
-            
-            // Check if the entering object has a child named "Football(Clone)"
+            StartCoroutine(CheckForFootball(other.transform));
+        }
+    }
+
+    IEnumerator CheckForFootball(Transform player)
+    {
+        // Continuously check for the presence of the football child
+        while (true)
+        {
             bool hasFootball = false;
-            foreach (Transform child in other.transform)
+            foreach (Transform child in player)
             {
                 if (child.name == "Football(Clone)")
                 {
@@ -35,33 +38,20 @@ public class WinZone : MonoBehaviour
                 }
             }
 
-            if (hasFootball && !scored)
+            if (hasFootball && !hasScored) // Check if the player has the football and hasn't scored yet
             {
-                Debug.Log("Player has football and has not scored yet");
-                
                 // Increment the score when a player with the football enters the trigger area
                 score += 7;
                 UpdateScoreUI();
-                scored = true; // Set scored to true to prevent multiple score increments in the same play
+                hasScored = true; // Set the flag to indicate that the score has been incremented
             }
+
+            yield return null; // Wait for the next frame to check again
         }
     }
 
     void UpdateScoreUI()
     {
         scoreText.text = score.ToString();
-    }
-
-    // Will reset the scored flag when the player with football leaves the endzone
-    void OnTriggerExit(Collider other)
-    {
-        Debug.Log("OnTriggerExit called");
-        
-        if (other.transform.Find("Football(Clone)") != null)
-        {
-            Debug.Log("Football exited the trigger");
-            
-            scored = false; // Reset the scored flag
-        }
     }
 }
