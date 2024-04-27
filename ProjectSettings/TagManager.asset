@@ -19,6 +19,9 @@ TagManager:
   - Foul
   - Bounds
   - FirstDownLine
+  - LineOfScrimmageAway
+  - HomeTeam
+  - AwayTeam
   layers:
   - Default
   - TransparentFX
