@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        ResumeTime();
         currentTime = totalTime;
         DisplayTime(totalTime);
         quarterText.text = "Quarter 1";
