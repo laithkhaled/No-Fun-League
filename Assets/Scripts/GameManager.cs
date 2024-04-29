@@ -3,7 +3,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int downCount = 1;
+    private int downCount = 3;
     private int maxDownCount = 4; // Maximum value for down count
 
     public TextMeshProUGUI downCountText; // Reference to the TextMeshProUGUI component
@@ -18,8 +18,12 @@ public class GameManager : MonoBehaviour
 
     public PlayManagerAway playManagerAway;
 
+    private bool isHomeTeamWithBall = true;
+
     void Start()
     {
+        GameObject awayTeamObject = GameObject.Find("AwayTeam");
+        awayTeamObject.SetActive(false);
         UpdateDownCountText();
         InitializeFirstDownLine();
 
@@ -62,6 +66,28 @@ public class GameManager : MonoBehaviour
         return;
     }
 
+    // Toggle possession
+    isHomeTeamWithBall = !isHomeTeamWithBall;
+    if (isHomeTeamWithBall)
+    {
+        Debug.Log("*****HomeTeam has ball and is swapped");
+        // Deactivate away team and activate home team
+        GameObject awayTeamObject = GameObject.Find("AwayTeam");
+        awayTeamObject.SetActive(false);
+
+        GameObject homeTeamObject = GameObject.Find("HomeTeam");
+        homeTeamObject.SetActive(true);
+    }
+    else
+    {
+        // Deactivate home team and activate away team
+        GameObject homeTeamObject = GameObject.Find("HomeTeam");
+        homeTeamObject.SetActive(false);
+
+        GameObject awayTeamObject = GameObject.Find("AwayTeam");
+        awayTeamObject.SetActive(true);
+    }
+
     // Swap positions
     Vector3 tempPosition = lineOfScrimmage.transform.position;
     lineOfScrimmage.transform.position = lineOfScrimmageAway.transform.position;
@@ -69,6 +95,7 @@ public class GameManager : MonoBehaviour
 
     Debug.Log("Swapped positions of LineOfScrimmage and LineOfScrimmage_Away.");
 }
+
 
     public void PlayerCrossedFirstDown()
     {

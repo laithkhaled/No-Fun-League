@@ -57,19 +57,19 @@ public class OffensiveFormationsAway : MonoBehaviour
         isRunning = true;
 
         //Wide1 Runs a verticle
-        MoveObject(Wide1, Vector3.right, 5f); 
+        MoveObject(Wide1, Vector3.left, 5f); 
 
         //Wide2 runs slant
-        MoveObject(Wide2, Vector3.right, 1f); 
-        MoveObject(Wide2, Vector3.up, 4f);
+        MoveObject(Wide2, Vector3.left, 2f); 
+        MoveObject(Wide2, Vector3.down, 3f);
 
         //Wide 3 runs a curl
-        MoveObject(Wide3, Vector3.right, 3f);
-        MoveObject(Wide3, Vector3.left, 0.5f);
+        MoveObject(Wide3, Vector3.left, 3f);
+        MoveObject(Wide3, Vector3.right, 0.5f);
 
         //TEnd runs a stick
-        MoveObject(TEnd, Vector3.right, 2f);
-        MoveObject(TEnd, Vector3.down, 1f);
+        MoveObject(TEnd, Vector3.left, 2f);
+        MoveObject(TEnd, Vector3.up, 1f);
 
         // Wait for all objects to finish moving
         yield return new WaitForSeconds(5f);
@@ -81,17 +81,17 @@ public class OffensiveFormationsAway : MonoBehaviour
         isRunning = true;
 
         // Wide 1 runs drag
-        MoveObject(Wide1, Vector3.right, 1f);
-        MoveObject(Wide1, Vector3.down, 4f);
+        MoveObject(Wide1, Vector3.left, 1.5f);
+        MoveObject(Wide1, Vector3.up, 3.5f);
 
         // Wide2 & 3 run drags
-        MoveObject(Wide3, Vector3.right, 1f);
-        MoveObject(Wide2, Vector3.right, 1f);
-        MoveObject(Wide3, Vector3.up, 4f);
-        MoveObject(Wide2, Vector3.up, 4f);
+        MoveObject(Wide3, Vector3.left, 1.5f);
+        MoveObject(Wide2, Vector3.left, 1.5f);
+        MoveObject(Wide3, Vector3.down, 3.5f);
+        MoveObject(Wide2, Vector3.down, 3.5f);
 
         //TEnd Runs a vertical
-        MoveObject(TEnd, Vector3.right, 5f);
+        MoveObject(TEnd, Vector3.left, 5f);
 
         // Wait for all objects to finish moving
         yield return new WaitForSeconds(5f);
@@ -103,10 +103,10 @@ public class OffensiveFormationsAway : MonoBehaviour
         isRunning = true;
 
         //All Receivers run verticles.
-        MoveObject(TEnd, Vector3.right , 5f);
-        MoveObject(Wide1, Vector3.right , 5f);
-        MoveObject(Wide2, Vector3.right , 5f);
-        MoveObject(Wide3, Vector3.right , 5f);
+        MoveObject(TEnd, Vector3.left , 5f);
+        MoveObject(Wide1, Vector3.left , 5f);
+        MoveObject(Wide2, Vector3.left , 5f);
+        MoveObject(Wide3, Vector3.left , 5f);
 
         // Wait for all objects to finish moving
         yield return new WaitForSeconds(5f);
