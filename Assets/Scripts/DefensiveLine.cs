@@ -20,7 +20,7 @@ public class DefensiveLine : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         // 50% chance to block
-        int randomChoice = Random.Range(1, 2);
+        int randomChoice = Random.Range(1, 3);
         // Rare chance for holding foul
         int randomChoice2 = Random.Range(1, 20);
 
