@@ -13293,6 +13293,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 900508455}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ResumeTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &887981448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15156,6 +15168,18 @@ MonoBehaviour:
       - m_Target: {fileID: -8436887548011643746, guid: dce655403fc72944b8505bb7921142af, type: 3}
         m_TargetAssemblyTypeName: SuspicionChecks, Assembly-CSharp
         m_MethodName: ChooseHolding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 900508455}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ResumeTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30751,6 +30775,18 @@ MonoBehaviour:
       - m_Target: {fileID: -8436887548011643746, guid: dce655403fc72944b8505bb7921142af, type: 3}
         m_TargetAssemblyTypeName: SuspicionChecks, Assembly-CSharp
         m_MethodName: ChooseRoughHousing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 900508455}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ResumeTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

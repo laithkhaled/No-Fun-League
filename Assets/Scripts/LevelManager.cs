@@ -87,6 +87,7 @@ public class LevelManager : MonoBehaviour
     public void FlagLanded()
     {
         StopTimer();
+        Time.timeScale = 0f;
         flagCallWindow.SetActive(true);
         // Player cannot throw flags
         throwFlagScript.enabled = false;
@@ -265,5 +266,10 @@ public class LevelManager : MonoBehaviour
                 Destroy(foul);
             }
         }
+    }
+
+    public void ResumeTime()
+    {
+        Time.timeScale = 1f;
     }
 }
