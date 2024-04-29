@@ -12,21 +12,21 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelMap.unity
     guid: 01fe502d6bea66f4393d8e3ac9bcfb3c
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/DuckLevel.unity
     guid: 487f817c5dd0619468596244ff15716c
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/TanukiLevel.unity
     guid: 637ae0c7f01333f498c58c62feeafda0
   - enabled: 1
-    path: Assets/Scenes/Level3.unity
+    path: Assets/Scenes/SnakeLevel.unity
     guid: 8a93510b8cf5c844d9256c3af83dd12c
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
+    path: Assets/Scenes/JoeLevel.unity
     guid: 17982993945783446835be0da7ea0560
   - enabled: 1
-    path: Assets/Scenes/Level5.unity
+    path: Assets/Scenes/BobaLevel.unity
     guid: bd6b851c5eab70f449229e5221a95cff
   - enabled: 1
-    path: Assets/Scenes/Level6.unity
+    path: Assets/Scenes/BucLevel.unity
     guid: 08984f4dd1cfb92449c807ee45f5aed7
   m_configObjects: {}
