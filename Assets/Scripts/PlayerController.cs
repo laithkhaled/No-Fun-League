@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
-    
+    public GameObject endZone;
 
     void Start()
     {
@@ -54,7 +54,6 @@ public class PlayerController : MonoBehaviour
 
     private void FindEndZoneTarget()
     {
-        GameObject endZone = GameObject.FindGameObjectWithTag("Endzone1");
         if (endZone != null)
         {
             endZoneTarget = endZone.transform;
@@ -95,6 +94,7 @@ public class PlayerController : MonoBehaviour
     {
         isTackled = false;
         gameManager.CallRandomFormationBoth();
+        gameManager.IncreaseDownCount();
     }
 
     public void CatchBall()

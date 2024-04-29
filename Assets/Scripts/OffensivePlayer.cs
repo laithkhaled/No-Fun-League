@@ -20,14 +20,14 @@ public class OffensivePlayer : MonoBehaviour
         // Check if the collision is with a defensive player and this player has the ball
         if (collision.CompareTag("Defense") && receiverController.hasBall)
         {
-            receiverController.GetTackled(); // Call the method to handle getting tackled
-
             // Check if the game object has a child named "Football"
             Transform footballTransform = transform.Find("Football(Clone)");
             if (footballTransform != null)
             {
                 Destroy(footballTransform.gameObject);
             }
+            
+            receiverController.GetTackled(); // Call the method to handle getting tackled
         }
         // Check if the collision is with a defensive player and receiver 
         else if (collision.CompareTag("Defense") && gameObject.CompareTag("Receiver") && !radiusSpawned && randomChoice == 1)

@@ -3,7 +3,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int downCount = 3;
+    private int downCount = 1;
     private int maxDownCount = 4; // Maximum value for down count
 
     public TextMeshProUGUI downCountText;
@@ -61,20 +61,20 @@ public class GameManager : MonoBehaviour
     }
 
     public void IncreaseDownCount()
-{
-    if (downCount < maxDownCount)
     {
-        downCount++;
-        Debug.Log("Down count increased: " + downCount);
-        UpdateDownCountText();
+        if (downCount < maxDownCount)
+        {
+            downCount++;
+            Debug.Log("Down count increased: " + downCount);
+            UpdateDownCountText();
+        }
+        else
+        {
+            Debug.Log("Maximum down count reached, swapping positions.");
+            teamSwapper.SwapTeams();
+            ResetDowns();
+        }
     }
-    else
-    {
-        Debug.Log("Maximum down count reached, swapping positions.");
-        teamSwapper.SwapTeams();
-        ResetDowns();
-    }
-}
 
     public void CallRandomFormationBoth()
     {
@@ -82,13 +82,12 @@ public class GameManager : MonoBehaviour
         {
             playManager.RandomFormation();
             playManagerAway.RandomFormation();
-            IncreaseDownCount();
             //Debug.Log("Called RandomFormation on both PlayManager and PlayManagerAway.");
         }
         else
         {
             Debug.LogError("One of the PlayManagers is not assigned.");
-            }
+        }
     }
 
     void UpdateDownCountText()

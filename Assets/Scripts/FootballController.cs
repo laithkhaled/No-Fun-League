@@ -24,8 +24,8 @@ public class FootballController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bounds"))
         {
             Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
-            //Invoke("DelayRandomFormation", 4.5f);
-            gameManager.CallRandomFormationBoth();
+            Invoke("DelayRandomFormation", 4.5f);
+            gameManager.IncreaseDownCount();
             Destroy(gameObject);
         }
     }
