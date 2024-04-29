@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public static bool isRunning, isThrowing;
-    public float moveSpeed;
+    public float moveSpeed = 4;
     public float raycastDistance = 0.1f;
 
     public Rigidbody2D rb;
