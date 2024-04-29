@@ -5,37 +5,32 @@ public class SceneLoader : MonoBehaviour
 {
     public void Level1Button()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("JoeLevel");
     }
 
     public void Level2Button()
     {
-        //SceneManager.LoadScene("Level2");
-        Debug.Log("Level2");
+        SceneManager.LoadScene("BobaLevel");
     }
 
     public void Level3Button()
     {
-        //SceneManager.LoadScene("Level3");
-        Debug.Log("Level3");
+        SceneManager.LoadScene("DuckLevel");
     }
 
     public void Level4Button()
     {
-        //SceneManager.LoadScene("Level4");
-        Debug.Log("Level4");
+        SceneManager.LoadScene("TanukiLevel");
     }
 
     public void Level5Button()
     {
-        //SceneManager.LoadScene("Level5");
-        Debug.Log("Level5");
+        SceneManager.LoadScene("SnakeLevel");
     }
 
     public void Level6Button()
     {
-        //SceneManager.LoadScene("Level6");
-        Debug.Log("Level6");
+        SceneManager.LoadScene("BucLevel");
     }
 
     public void MainMenu(){
