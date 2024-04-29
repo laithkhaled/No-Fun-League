@@ -6,11 +6,10 @@ public class GameManager : MonoBehaviour
     private int downCount = 3;
     private int maxDownCount = 4; // Maximum value for down count
 
-    public TextMeshProUGUI downCountText; // Reference to the TextMeshProUGUI component
+    public TextMeshProUGUI downCountText;
 
     private float firstDownLineX = 0.0f; // X position of the first down line
 
-    // Reference to PlayManager script
     private PlayManager playManager;
 
     public GameObject lineOfScrimmage;
@@ -18,12 +17,10 @@ public class GameManager : MonoBehaviour
 
     public PlayManagerAway playManagerAway;
 
-    private bool isHomeTeamWithBall = true;
+    public TeamSwapper teamSwapper;
 
     void Start()
     {
-        GameObject awayTeamObject = GameObject.Find("AwayTeam");
-        awayTeamObject.SetActive(false);
         UpdateDownCountText();
         InitializeFirstDownLine();
 
@@ -33,11 +30,9 @@ public class GameManager : MonoBehaviour
 
     public void InitializeFirstDownLine()
     {
-        // Assuming the first down line object is tagged as "FirstDownLine"
         GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
         if (firstDownLine != null)
         {
-            // Assuming the line of scrimmage starts at the position of the player or a specified object
             GameObject lineOfScrimmage = GameObject.FindGameObjectWithTag("LineOfScrimmage");
             if (lineOfScrimmage != null)
             {
@@ -58,45 +53,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SwapLineOfScrimmage()
-{
-    if (lineOfScrimmage == null || lineOfScrimmageAway == null)
-    {
-        Debug.LogError("One of the Line of Scrimmage objects is not assigned.");
-        return;
-    }
-
-    // Toggle possession
-    isHomeTeamWithBall = !isHomeTeamWithBall;
-    if (isHomeTeamWithBall)
-    {
-        Debug.Log("*****HomeTeam has ball and is swapped");
-        // Deactivate away team and activate home team
-        GameObject awayTeamObject = GameObject.Find("AwayTeam");
-        awayTeamObject.SetActive(false);
-
-        GameObject homeTeamObject = GameObject.Find("HomeTeam");
-        homeTeamObject.SetActive(true);
-    }
-    else
-    {
-        // Deactivate home team and activate away team
-        GameObject homeTeamObject = GameObject.Find("HomeTeam");
-        homeTeamObject.SetActive(false);
-
-        GameObject awayTeamObject = GameObject.Find("AwayTeam");
-        awayTeamObject.SetActive(true);
-    }
-
-    // Swap positions
-    Vector3 tempPosition = lineOfScrimmage.transform.position;
-    lineOfScrimmage.transform.position = lineOfScrimmageAway.transform.position;
-    lineOfScrimmageAway.transform.position = tempPosition;
-
-    Debug.Log("Swapped positions of LineOfScrimmage and LineOfScrimmage_Away.");
-}
-
-
     public void PlayerCrossedFirstDown()
     {
         // Logic when the player crosses the first down line
@@ -115,26 +71,25 @@ public class GameManager : MonoBehaviour
     else
     {
         Debug.Log("Maximum down count reached, swapping positions.");
-        SwapLineOfScrimmage();
+        teamSwapper.SwapTeams();
         ResetDowns();
-        CallRandomFormationBoth();
     }
 }
 
     public void CallRandomFormationBoth()
-{
-    if (playManager != null && playManagerAway != null)
     {
-        playManager.RandomFormation();
-        playManagerAway.RandomFormation();
-        IncreaseDownCount();
-        Debug.Log("Called RandomFormation on both PlayManager and PlayManagerAway.");
+        if (playManager != null && playManagerAway != null)
+        {
+            playManager.RandomFormation();
+            playManagerAway.RandomFormation();
+            IncreaseDownCount();
+            //Debug.Log("Called RandomFormation on both PlayManager and PlayManagerAway.");
+        }
+        else
+        {
+            Debug.LogError("One of the PlayManagers is not assigned.");
+            }
     }
-    else
-    {
-        Debug.LogError("One of the PlayManagers is not assigned.");
-    }
-}
 
     void UpdateDownCountText()
     {
@@ -146,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetDowns()
     {
-        if (downCount == 1)
+       /* if (downCount == 1)
         {
             // Teleport the first down line object 7.8 units ahead
             GameObject firstDownLine = GameObject.FindGameObjectWithTag("FirstDownLine");
@@ -160,7 +115,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.LogError("First down line object not found or tagged incorrectly!");
             }
-        }
+        }*/ 
     
         downCount = 1; // Resets the down count
         UpdateDownCountText(); // Update the display
