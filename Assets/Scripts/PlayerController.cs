@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (hasBall && isMoving && endZoneTarget != null)
         {
             MoveTowardsEndZone();
-            animator.SetBool("getsBall", false);
+            //animator.SetBool("getsBall", false);
             animator.SetBool("isRunningBall", true);
         }
 
