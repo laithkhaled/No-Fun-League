@@ -51,5 +51,7 @@ public class DefensiveLine : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
         radiusSpawned = false;
+        // Blocking animation
+        animator.SetBool("isBlocking", false);
     }
 }

@@ -9,6 +9,7 @@ public class DefensiveCoverage : MonoBehaviour
     private GameObject ballCarrier = null;
     private Rigidbody2D rb;
     private bool isMoving = false;
+    public SpriteRenderer spriteRenderer;
 
     // Static event to be shared across all instances of DefensiveCoverage
     public static event Action BallCarrierTackledEvent;
@@ -17,7 +18,8 @@ public class DefensiveCoverage : MonoBehaviour
     {
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         // Subscribe to the static event
         BallCarrierTackledEvent += RespondToTackleEvent;
     }
@@ -88,6 +90,16 @@ public class DefensiveCoverage : MonoBehaviour
             Vector3 direction = (ballCarrier.transform.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.position = Vector3.MoveTowards(transform.position, ballCarrier.transform.position, speed * Time.deltaTime);
+
+            // Flip the sprite based on movement direction
+            if (direction.x > 0) // Moving right
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (direction.x < 0) // Moving left
+            {
+                spriteRenderer.flipX = true;
+            }
         }
     }
 

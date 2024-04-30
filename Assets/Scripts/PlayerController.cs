@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
         if (hasBall && isMoving && endZoneTarget != null)
         {
             MoveTowardsEndZone();
+            animator.SetBool("getsBall", false);
+            animator.SetBool("isRunningBall", true);
         }
 
         UpdateAnimatorSpeed();
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
         previousPosition = transform.position;
     }
 
+
     private void FindEndZoneTarget()
     {
         if (endZone != null)
@@ -67,8 +70,15 @@ public class PlayerController : MonoBehaviour
         float runSpeed = speed / 2;
         transform.position += direction * runSpeed * Time.deltaTime;
 
-        animator.SetBool("getsBall", false);
-        animator.SetBool("isRunningBall", true);
+        // Flip the sprite based on movement direction
+        if (direction.x > 0) // Moving right
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (direction.x < 0) // Moving left
+        {
+            spriteRenderer.flipX = true;
+        }
     }
 
     public void StopMovement()
@@ -81,6 +91,8 @@ public class PlayerController : MonoBehaviour
         hasBall = false;
         isTackled = true;
         StopMovement();
+        animator.SetBool("getsBall", false);
+        animator.SetBool("isRunningBall", false);
         animator.SetBool("isTackled", true);
         // Find the LevelManager script 
         LevelManager levelManager = FindObjectOfType<LevelManager>();
@@ -93,6 +105,7 @@ public class PlayerController : MonoBehaviour
     void CallRandomFormationWithDelay()
     {
         isTackled = false;
+        animator.SetBool("isTackled", false);
         gameManager.CallRandomFormationBoth();
         gameManager.IncreaseDownCount();
     }
