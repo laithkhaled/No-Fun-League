@@ -1,13 +1,15 @@
 using UnityEngine;
-using System.Collections; // Needed for IEnumerator
+using System.Collections;
 
 public class FootballController : MonoBehaviour
 {
     private GameManager gameManager;
+    private SpriteRenderer spriteRenderer; 
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); 
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -21,12 +23,18 @@ public class FootballController : MonoBehaviour
 
             // Call CatchBall on the receiver's PlayerController script
             collision.gameObject.GetComponent<PlayerController>()?.CatchBall();
+
+            spriteRenderer.enabled = false;
         }
-        if (collision.gameObject.CompareTag("Bounds") || collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Bounds") || collision.gameObject.CompareTag("Player"))
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             //Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
             StartCoroutine(DelayIncreaseCount());
+        }
+        else
+        {
+            spriteRenderer.enabled = true;
         }
     }
 

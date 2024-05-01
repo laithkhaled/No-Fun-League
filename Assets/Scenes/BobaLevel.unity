@@ -2153,6 +2153,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &121872114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2908,6 +2911,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &156587459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3274,6 +3280,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!212 &167851883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4193,6 +4202,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &232868496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5931,6 +5943,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &316484159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6450,6 +6465,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &329304262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9376,6 +9394,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &476634187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9602,6 +9623,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &485071926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10401,6 +10425,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &541566716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10958,6 +10985,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &572939534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11508,6 +11538,8 @@ MonoBehaviour:
   footballPrefab: {fileID: 116550499}
   RHRadiusPrefab: {fileID: 8191261243712021172, guid: 32e49bd3aeca22041bede8866fcd59f7, type: 3}
   animator: {fileID: 618128052}
+  throwSound: {fileID: 0}
+  throwClip: {fileID: 0}
 --- !u!212 &618128051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11626,6 +11658,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!1 &625274575
 GameObject:
   m_ObjectHideFlags: 0
@@ -13760,6 +13795,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!1 &754582610
 GameObject:
   m_ObjectHideFlags: 0
@@ -15613,6 +15651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2115151472}
+  scoreSound: {fileID: 0}
+  scoreClip: {fileID: 0}
   gameManager: {fileID: 1203984616}
   teamSwapper: {fileID: 2018032818}
   homeStartPos: {fileID: 2073788814}
@@ -15866,6 +15906,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &814511900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16493,6 +16536,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &837750698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16513,6 +16559,8 @@ MonoBehaviour:
   footballPrefab: {fileID: 116550499}
   RHRadiusPrefab: {fileID: 8191261243712021172, guid: 32e49bd3aeca22041bede8866fcd59f7, type: 3}
   animator: {fileID: 837750692}
+  throwSound: {fileID: 0}
+  throwClip: {fileID: 0}
 --- !u!1 &841901666
 GameObject:
   m_ObjectHideFlags: 0
@@ -17231,6 +17279,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &883546010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18310,6 +18361,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &922896913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19011,6 +19065,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &953713048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19450,6 +19507,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &965282651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20466,6 +20526,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &998409849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20910,6 +20973,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1018179195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21204,6 +21270,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 0}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1029313640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22779,6 +22848,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 0}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1149942222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23259,6 +23331,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1181185634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23893,6 +23968,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 0}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1194525794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24302,17 +24380,17 @@ MonoBehaviour:
   Wide1: {fileID: 1524179465}
   Wide2: {fileID: 167851877}
   Wide3: {fileID: 1426939969}
-  QBSH: {fileID: 0}
-  RBSH: {fileID: 0}
-  LT: {fileID: 0}
-  LG: {fileID: 0}
-  C: {fileID: 0}
-  RG: {fileID: 0}
-  RT: {fileID: 0}
-  TE: {fileID: 0}
-  WR1: {fileID: 0}
-  WR2: {fileID: 0}
-  WR3: {fileID: 0}
+  QBSH: {fileID: 1818975419}
+  RBSH: {fileID: 2092248807}
+  LT: {fileID: 880886273}
+  LG: {fileID: 1030519801}
+  C: {fileID: 141570719}
+  RG: {fileID: 1794597939}
+  RT: {fileID: 991263609}
+  TE: {fileID: 1867738186}
+  WR1: {fileID: 2022923980}
+  WR2: {fileID: 204186387}
+  WR3: {fileID: 1418723409}
   CornerB1: {fileID: 1786608097}
   CornerB2: {fileID: 1181185628}
   CornerB3: {fileID: 998409843}
@@ -24324,19 +24402,19 @@ MonoBehaviour:
   LineB2: {fileID: 1709659787}
   RightE: {fileID: 1237521225}
   LeftE: {fileID: 156587453}
-  CB1: {fileID: 0}
-  CB2: {fileID: 0}
-  CB3: {fileID: 0}
-  LB1: {fileID: 0}
-  LB2: {fileID: 0}
-  DT1: {fileID: 0}
-  DT2: {fileID: 0}
-  S1: {fileID: 0}
-  S2: {fileID: 0}
-  RE: {fileID: 0}
-  LE: {fileID: 0}
-  shotGunPositions: {fileID: 0}
-  pistolPositions: {fileID: 0}
+  CB1: {fileID: 2026928979}
+  CB2: {fileID: 785851472}
+  CB3: {fileID: 982887319}
+  LB1: {fileID: 1085479450}
+  LB2: {fileID: 363776804}
+  DT1: {fileID: 778172268}
+  DT2: {fileID: 964927912}
+  S1: {fileID: 878018645}
+  S2: {fileID: 285207811}
+  RE: {fileID: 263382185}
+  LE: {fileID: 258117598}
+  shotGunPositions: {fileID: 1462666861}
+  pistolPositions: {fileID: 30133880}
 --- !u!114 &1203984616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24350,10 +24428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downCountText: {fileID: 1414450349}
-  lineOfScrimmage: {fileID: 0}
-  lineOfScrimmageAway: {fileID: 0}
+  lineOfScrimmage: {fileID: 30931575}
+  lineOfScrimmageAway: {fileID: 421518725}
   playManagerAway: {fileID: 1203984617}
-  teamSwapper: {fileID: 0}
+  teamSwapper: {fileID: 2018032818}
 --- !u!114 &1203984617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24377,17 +24455,17 @@ MonoBehaviour:
   Wide1: {fileID: 883546005}
   Wide2: {fileID: 1339992238}
   Wide3: {fileID: 1512932842}
-  QBSH: {fileID: 0}
-  RBSH: {fileID: 0}
-  LT: {fileID: 0}
-  LG: {fileID: 0}
-  C: {fileID: 0}
-  RG: {fileID: 0}
-  RT: {fileID: 0}
-  TE: {fileID: 0}
-  WR1: {fileID: 0}
-  WR2: {fileID: 0}
-  WR3: {fileID: 0}
+  QBSH: {fileID: 1969473286}
+  RBSH: {fileID: 129375116}
+  LT: {fileID: 665122901}
+  LG: {fileID: 1403181500}
+  C: {fileID: 322759124}
+  RG: {fileID: 1618054724}
+  RT: {fileID: 1578945534}
+  TE: {fileID: 1050940165}
+  WR1: {fileID: 1473547595}
+  WR2: {fileID: 2142780772}
+  WR3: {fileID: 1481517808}
   CornerB1: {fileID: 922896908}
   CornerB2: {fileID: 965282646}
   CornerB3: {fileID: 572939529}
@@ -24399,19 +24477,19 @@ MonoBehaviour:
   LineB2: {fileID: 329304257}
   RightE: {fileID: 1807705902}
   LeftE: {fileID: 1554504231}
-  CB1: {fileID: 0}
-  CB2: {fileID: 0}
-  CB3: {fileID: 0}
-  LB1: {fileID: 0}
-  LB2: {fileID: 0}
-  DT1: {fileID: 0}
-  DT2: {fileID: 0}
-  S1: {fileID: 0}
-  S2: {fileID: 0}
-  RE: {fileID: 0}
-  LE: {fileID: 0}
-  shotGunPositions: {fileID: 0}
-  pistolPositions: {fileID: 0}
+  CB1: {fileID: 522920464}
+  CB2: {fileID: 773848522}
+  CB3: {fileID: 2008447186}
+  LB1: {fileID: 1497353680}
+  LB2: {fileID: 1684366941}
+  DT1: {fileID: 1440238424}
+  DT2: {fileID: 74979248}
+  S1: {fileID: 1936744928}
+  S2: {fileID: 930161961}
+  RE: {fileID: 1200420913}
+  LE: {fileID: 321247313}
+  shotGunPositions: {fileID: 1149088893}
+  pistolPositions: {fileID: 30133880}
 --- !u!1 &1206269965
 GameObject:
   m_ObjectHideFlags: 0
@@ -25435,6 +25513,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1237521231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26761,6 +26842,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1310200766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27702,6 +27786,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1339992243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29173,6 +29260,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!212 &1426939975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29795,6 +29885,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1455248842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29924,6 +30017,8 @@ MonoBehaviour:
   Wide2: {fileID: 167851877}
   Wide3: {fileID: 1426939969}
   TEnd: {fileID: 2030206034}
+  whistleSound: {fileID: 0}
+  whistleClip: {fileID: 0}
 --- !u!114 &1459827040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29940,6 +30035,8 @@ MonoBehaviour:
   Wide2: {fileID: 1339992238}
   Wide3: {fileID: 1512932842}
   TEnd: {fileID: 1455248837}
+  whistleSound: {fileID: 0}
+  whistleClip: {fileID: 0}
 --- !u!1 &1461717546
 GameObject:
   m_ObjectHideFlags: 0
@@ -30372,6 +30469,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 0}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1464861244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31723,6 +31823,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1512932847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32024,6 +32127,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1521010513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32159,6 +32265,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!212 &1524179471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32822,6 +32931,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1554504236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33392,6 +33504,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1578015559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34624,6 +34739,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1619630132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35099,6 +35217,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 0}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!114 &1645534804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36363,6 +36484,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1709659793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37018,6 +37142,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1786608103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37642,6 +37769,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1807705908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38661,6 +38791,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1840783830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40871,6 +41004,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!61 &1986101030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41895,6 +42031,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   gameManager: {fileID: 1203984616}
   endZone: {fileID: 0}
+  scoreSound: {fileID: 0}
+  tackleSound: {fileID: 0}
+  catchSound: {fileID: 0}
 --- !u!212 &2030206040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42113,6 +42252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 76547319}
+  scoreSound: {fileID: 0}
+  scoreClip: {fileID: 0}
   gameManager: {fileID: 1203984616}
   teamSwapper: {fileID: 2018032818}
   homeStartPos: {fileID: 2073788814}
