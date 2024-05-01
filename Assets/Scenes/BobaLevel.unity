@@ -2127,6 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c549d787669704181aae8f7dc17d143c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outOfBoundsText: {fileID: 792399612}
 --- !u!50 &116550502
 Rigidbody2D:
   serializedVersion: 4
@@ -2316,6 +2317,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &121872114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2822,6 +2824,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &156587459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2875,7 +2878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &156587462
 SpriteRenderer:
@@ -3024,6 +3027,7 @@ MonoBehaviour:
   scoreSound: {fileID: 1524179476}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!212 &167851883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3434,6 +3438,141 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &197023192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 197023195}
+  - component: {fileID: 197023194}
+  - component: {fileID: 197023193}
+  m_Layer: 5
+  m_Name: PlayerTackledText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &197023193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197023192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Player Tackled!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6f31d1bcac603e84abb70fc8a945477c, type: 2}
+  m_sharedMaterial: {fileID: 2643203677969708834, guid: 6f31d1bcac603e84abb70fc8a945477c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 200
+  m_fontSizeBase: 200
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &197023194
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197023192}
+  m_CullTransparentMesh: 1
+--- !u!224 &197023195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197023192}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 631667940}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -650, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &197564668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,6 +4264,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &232868496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4164,7 +4304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1515232113}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &232868499
 SpriteRenderer:
@@ -5940,6 +6080,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &316484159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6378,6 +6519,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &329304262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8075,6 +8217,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &476634187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8388,6 +8531,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &485071926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8427,7 +8571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 725997094}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &485071929
 SpriteRenderer:
@@ -9048,6 +9192,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &541566716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10070,6 +10215,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &572939534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11002,6 +11148,7 @@ MonoBehaviour:
   animator: {fileID: 618128052}
   throwSound: {fileID: 618128055}
   throwClip: {fileID: 8300000, guid: d6f94eed615554238af39afa9bfaede0, type: 3}
+  throwForce: 1000
 --- !u!212 &618128051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11123,6 +11270,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!82 &618128055
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11504,6 +11652,8 @@ RectTransform:
   - {fileID: 148385857}
   - {fileID: 1812864434}
   - {fileID: 1504882062}
+  - {fileID: 792399611}
+  - {fileID: 197023195}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14032,6 +14182,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!1 &739828550
 GameObject:
   m_ObjectHideFlags: 0
@@ -14838,6 +14989,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784403664}
+  m_CullTransparentMesh: 1
+--- !u!1 &792399610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792399611}
+  - component: {fileID: 792399613}
+  - component: {fileID: 792399612}
+  m_Layer: 5
+  m_Name: OutOfBoundsText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &792399611
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792399610}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 631667940}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -500, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &792399612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792399610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: OUT OF BOUNDS!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6f31d1bcac603e84abb70fc8a945477c, type: 2}
+  m_sharedMaterial: {fileID: 2643203677969708834, guid: 6f31d1bcac603e84abb70fc8a945477c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 200
+  m_fontSizeBase: 200
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &792399613
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792399610}
   m_CullTransparentMesh: 1
 --- !u!1 &793155918
 GameObject:
@@ -15729,6 +16015,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &814511900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16314,6 +16601,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &837750698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16336,6 +16624,7 @@ MonoBehaviour:
   animator: {fileID: 837750692}
   throwSound: {fileID: 837750699}
   throwClip: {fileID: 8300000, guid: d6f94eed615554238af39afa9bfaede0, type: 3}
+  throwForce: 600
 --- !u!82 &837750699
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17062,7 +17351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1050cd60e1343afbbb412c714fae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   hasBall: 0
   isTackled: 0
   animator: {fileID: 0}
@@ -17072,6 +17361,7 @@ MonoBehaviour:
   scoreSound: {fileID: 883546014}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!61 &883546010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18129,6 +18419,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &922896913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18665,6 +18956,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &953713048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18939,6 +19231,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &965282651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19790,6 +20083,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &998409849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19829,7 +20123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1702635401}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &998409852
 SpriteRenderer:
@@ -20270,6 +20564,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1018179195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20323,7 +20618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1018179198
 SpriteRenderer:
@@ -20567,6 +20862,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1029313640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22373,6 +22669,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1149942222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23276,6 +23573,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1181185634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23315,7 +23613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 108986753}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1181185637
 SpriteRenderer:
@@ -23745,6 +24043,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1194525794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25071,6 +25370,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1237521231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25110,7 +25410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1237521234
 SpriteRenderer:
@@ -27000,6 +27300,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1310200766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27601,7 +27902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1050cd60e1343afbbb412c714fae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   hasBall: 0
   isTackled: 0
   animator: {fileID: 0}
@@ -27611,6 +27912,7 @@ MonoBehaviour:
   scoreSound: {fileID: 883546014}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!61 &1339992243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29083,6 +29385,7 @@ MonoBehaviour:
   scoreSound: {fileID: 1524179476}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!212 &1426939975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29629,7 +29932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1050cd60e1343afbbb412c714fae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   hasBall: 0
   isTackled: 0
   animator: {fileID: 0}
@@ -29639,6 +29942,7 @@ MonoBehaviour:
   scoreSound: {fileID: 883546014}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!61 &1455248842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30333,6 +30637,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1464861244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31354,7 +31659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1050cd60e1343afbbb412c714fae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   hasBall: 0
   isTackled: 0
   animator: {fileID: 0}
@@ -31364,6 +31669,7 @@ MonoBehaviour:
   scoreSound: {fileID: 883546014}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!61 &1512932847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31811,6 +32117,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1521010513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31950,6 +32257,7 @@ MonoBehaviour:
   scoreSound: {fileID: 1524179476}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!212 &1524179471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32544,6 +32852,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1554504236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33201,6 +33510,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1578015559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34260,6 +34570,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1619630132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34905,6 +35216,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!114 &1645534804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36557,6 +36869,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1709659793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36596,7 +36909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1578415966}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1709659796
 SpriteRenderer:
@@ -38349,6 +38662,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1786608103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38388,7 +38702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 51256213}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1786608106
 SpriteRenderer:
@@ -38976,6 +39290,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1807705908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39746,6 +40061,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1840783830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39785,7 +40101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 618128047}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1840783833
 SpriteRenderer:
@@ -42377,6 +42693,7 @@ MonoBehaviour:
   scoreSound: {fileID: 0}
   tackleSound: {fileID: 0}
   catchSound: {fileID: 0}
+  playerTackledText: {fileID: 0}
 --- !u!61 &1986101030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42416,7 +42733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1910874841}
-  speed: 3
+  speed: 4
   spriteRenderer: {fileID: 0}
 --- !u!212 &1986101033
 SpriteRenderer:
@@ -43266,6 +43583,7 @@ MonoBehaviour:
   scoreSound: {fileID: 1524179476}
   tackleSound: {fileID: 8300000, guid: 925c60dc3f75b4c10ac3c44396ebefff, type: 3}
   catchSound: {fileID: 8300000, guid: a689a34c1996b434488d3ba3c6b7dce0, type: 3}
+  playerTackledText: {fileID: 197023193}
 --- !u!212 &2030206040
 SpriteRenderer:
   m_ObjectHideFlags: 0

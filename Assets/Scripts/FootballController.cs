@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class FootballController : MonoBehaviour
 {
     private GameManager gameManager;
     private SpriteRenderer spriteRenderer; 
+
+    public TMP_Text outOfBoundsText;
 
     void Start()
     {
@@ -30,6 +33,7 @@ public class FootballController : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             //Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
+            StartCoroutine(ShowOutOfBoundsText());
             StartCoroutine(DelayIncreaseCount());
         }
         else
@@ -44,5 +48,12 @@ public class FootballController : MonoBehaviour
         gameManager.IncreaseDownCount();
         gameManager.CallRandomFormationBoth();
         Destroy(gameObject);
+    }
+
+    IEnumerator ShowOutOfBoundsText()
+    {
+        outOfBoundsText.gameObject.SetActive(true); 
+        yield return new WaitForSeconds(4f);
+        outOfBoundsText.gameObject.SetActive(false);
     }
 }

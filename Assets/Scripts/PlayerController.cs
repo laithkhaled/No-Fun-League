@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource scoreSound; 
     public AudioClip tackleSound; 
     public AudioClip catchSound;
+
+    public TMP_Text playerTackledText;
 
     void Start()
     {
@@ -92,6 +95,7 @@ public class PlayerController : MonoBehaviour
 
     public void GetTackled()
     {
+        StartCoroutine(ShowPlayerTackledText());
         hasBall = false;
         isTackled = true;
         StopMovement();
@@ -123,5 +127,12 @@ public class PlayerController : MonoBehaviour
         isMoving = true;
         if(scoreSound && catchSound)
                     scoreSound.PlayOneShot(catchSound);
+    }
+
+    IEnumerator ShowPlayerTackledText()
+    {
+        playerTackledText.gameObject.SetActive(true); 
+        yield return new WaitForSeconds(2f);
+        playerTackledText.gameObject.SetActive(false);
     }
 }

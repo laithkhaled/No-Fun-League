@@ -74,12 +74,10 @@ public class WinZone : MonoBehaviour
         if (teamSwapper.isHomeTeamWithBall) // Assuming 'isHomeTeamWithBall' means home team just scored
         {
             gameManager.TeleportLineOfS_Away(awayStartPos.transform.position);
-            hasScored = false;
         }
         else
         {
             gameManager.TeleportLineOfS(homeStartPos.transform.position);
-            hasScored = false;
         }
     }
 
