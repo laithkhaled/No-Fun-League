@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,13 +15,6 @@ public class LevelManager : MonoBehaviour
     public TMP_Text homeScoreText;
     public TMP_Text awayScoreText;
     public TMP_Text quarterText;
-    static Slider suspicionSlider;
-    float suspicion = 0f;
-    float suspicionIncreaseRate = 5f;
-    float maxSuspicion = 100f;
-    static GameObject handle;
-    static GameObject handle1;
-    static GameObject handle2;
     public int homeScore;
     public int awayScore;
 
@@ -41,24 +33,6 @@ public class LevelManager : MonoBehaviour
         currentTime = totalTime;
         DisplayTime(totalTime);
         quarterText.text = "Quarter 1";
-
-        suspicionSlider = GameObject.FindGameObjectWithTag("SuspicionMeter").GetComponent<Slider>();
-
-        // Find the handles dynamically
-        Transform handleTransform = suspicionSlider.transform.Find("Fill Area/Fill/Handle");
-        Transform handle1Transform = suspicionSlider.transform.Find("Fill Area/Fill/Handle1");
-        Transform handle2Transform = suspicionSlider.transform.Find("Fill Area/Fill/Handle2");
-
-        if (handleTransform != null && handle1Transform != null && handle2Transform != null)
-        {
-            handle = handleTransform.gameObject;
-            handle1 = handle1Transform.gameObject;
-            handle2 = handle2Transform.gameObject;
-        }
-        else
-        {
-            Debug.LogError("One or more handles not found as great grandchildren of the Slider.");
-        }
     }
 
     void Update()
@@ -73,15 +47,6 @@ public class LevelManager : MonoBehaviour
         if (isTimerRunning)
         {
             currentTime -= Time.deltaTime;
-
-            // Increase suspicion meter every second while timer is running
-            suspicion += suspicionIncreaseRate * Time.deltaTime;
-
-            // Update the UI Slider value with the current suspicion level
-            suspicionSlider.value = Mathf.Clamp01(suspicion / maxSuspicion);
-
-            // Update suspicion slider
-            UpdateSuspicionSliderValue();
 
             if (currentTime <= totalTime / 2 && !halftimeShown)
             {
@@ -108,39 +73,6 @@ public class LevelManager : MonoBehaviour
 
             DisplayTime(currentTime);
         }
-        else
-        {
-            // Suspicion meter stops increasing when timer is stopped
-            // No need to update the UI Slider in this case
-        }
-    }
-
-    void UpdateSuspicionSliderValue()
-    {
-
-        suspicionSlider.value = suspicion;
-
-        // Activate/deactivate handles based on suspicion level
-        if (suspicion < 33)
-        {
-            handle.SetActive(true);
-            handle1.SetActive(false);
-            handle2.SetActive(false);
-        }
-        else if (suspicion >= 33 && suspicion < 66)
-        {
-            handle.SetActive(false);
-            handle1.SetActive(true);
-            handle2.SetActive(false);
-        }
-        else
-        {
-            handle.SetActive(false);
-            handle1.SetActive(false);
-            handle2.SetActive(true);
-        }
-
-        // Debug.Log("Suspicion: " + suspicion);
     }
 
     public void StartTimer()
