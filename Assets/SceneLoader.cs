@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public Canvas canvasToDisable;
+
     public void Level1Button()
     {
         SceneManager.LoadScene("JoeLevel");
@@ -33,7 +35,18 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("BucLevel");
     }
 
-    public void MainMenu(){
+    public void MainMenu()
+    {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void DisableCanvas()
+    {
+        canvasToDisable.enabled = false;
+    }
+
+    public void EnableCanvas()
+    {
+        canvasToDisable.enabled = true;
     }
 }

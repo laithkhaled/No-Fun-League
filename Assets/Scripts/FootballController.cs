@@ -29,11 +29,15 @@ public class FootballController : MonoBehaviour
 
             spriteRenderer.enabled = false;
         }
-        else if (collision.gameObject.CompareTag("Bounds") || collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Bounds"))
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             //Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
             StartCoroutine(ShowOutOfBoundsText());
+            StartCoroutine(DelayIncreaseCount());
+        } else if (collision.gameObject.CompareTag("Player"))
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             StartCoroutine(DelayIncreaseCount());
         }
         else
