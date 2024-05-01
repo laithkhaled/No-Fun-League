@@ -79,6 +79,8 @@ public class WinZone : MonoBehaviour
         {
             gameManager.TeleportLineOfS(homeStartPos.transform.position);
         }
+
+        hasScored = false;
     }
 
     void UpdateScoreUI()
