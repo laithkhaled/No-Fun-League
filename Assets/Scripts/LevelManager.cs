@@ -151,6 +151,7 @@ public class LevelManager : MonoBehaviour
     public void StopTimer()
     {
         isTimerRunning = false;
+        throwFlagScript.clearThrowingAnimation();
     }
 
     public void FlagLanded()

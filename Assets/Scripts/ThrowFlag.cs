@@ -82,4 +82,12 @@ public class ThrowFlag : MonoBehaviour
     {
         lineRenderer.positionCount = 0;
     }
+
+    // So ref does not get stuck in throwing animation when play ends
+    public void clearThrowingAnimation()
+    {
+        clearTrajectory();
+        animator.SetBool("isThrowing", false);
+        animator.SetBool("isTimerRunning", false);
+    }
 }
