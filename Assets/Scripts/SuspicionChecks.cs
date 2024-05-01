@@ -40,7 +40,7 @@ public class SuspicionChecks : MonoBehaviour
             Debug.LogError("One or more handles not found as great grandchildren of the Slider.");
         }
 
-        suspicionSlider.value = suspicion;
+        suspicion = suspicionSlider.value;
 
         randomFalseFoul = Random.Range(1, 4);
     }
