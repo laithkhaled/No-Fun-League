@@ -17,7 +17,7 @@ public class TeamSwapper : MonoBehaviour
     private PlayManager playManager;
     private PlayManagerAway playManagerAway;
 
-    private bool isHomeTeamWithBall = true;
+    public bool isHomeTeamWithBall = true;
 
     void Start()
     {

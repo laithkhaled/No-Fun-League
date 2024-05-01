@@ -6,11 +6,9 @@ public class OffensiveFormationsAway : MonoBehaviour
     public GameObject Wide2;
     public GameObject Wide3;
     public GameObject TEnd;
-    public GameObject LeftT;
-    public GameObject LeftG;
-    public GameObject Center;
-    public GameObject RightG;
-    public GameObject RightT;
+
+    public AudioSource whistleSound; 
+    public AudioClip whistleClip;
 
     private float playerSpeed; 
     private bool playerTackled;
@@ -28,6 +26,8 @@ public class OffensiveFormationsAway : MonoBehaviour
         //CheckIfTackled();
         if (Input.GetKeyDown(KeyCode.F) && !isRunning) //Can't click F when the play is happening
         {
+            if(whistleSound && whistleClip)
+                    whistleSound.PlayOneShot(whistleClip);
             // Randomly choose a play. Need to make it choose through Formations in the future.
             int randomPlay = Random.Range(1, 4);
             switch (randomPlay)
@@ -61,7 +61,7 @@ public class OffensiveFormationsAway : MonoBehaviour
 
         //Wide2 runs slant
         MoveObject(Wide2, Vector3.left, 2f); 
-        MoveObject(Wide2, Vector3.down, 3f);
+        MoveObject(Wide2, Vector3.up, 3f);
 
         //Wide 3 runs a curl
         MoveObject(Wide3, Vector3.left, 3f);
@@ -69,7 +69,7 @@ public class OffensiveFormationsAway : MonoBehaviour
 
         //TEnd runs a stick
         MoveObject(TEnd, Vector3.left, 2f);
-        MoveObject(TEnd, Vector3.up, 1f);
+        MoveObject(TEnd, Vector3.down, 1f);
 
         // Wait for all objects to finish moving
         yield return new WaitForSeconds(5f);
@@ -82,13 +82,13 @@ public class OffensiveFormationsAway : MonoBehaviour
 
         // Wide 1 runs drag
         MoveObject(Wide1, Vector3.left, 1.5f);
-        MoveObject(Wide1, Vector3.up, 3.5f);
+        MoveObject(Wide1, Vector3.down, 3.5f);
 
         // Wide2 & 3 run drags
         MoveObject(Wide3, Vector3.left, 1.5f);
         MoveObject(Wide2, Vector3.left, 1.5f);
-        MoveObject(Wide3, Vector3.down, 3.5f);
-        MoveObject(Wide2, Vector3.down, 3.5f);
+        MoveObject(Wide3, Vector3.up, 3.5f);
+        MoveObject(Wide2, Vector3.up, 3.5f);
 
         //TEnd Runs a vertical
         MoveObject(TEnd, Vector3.left, 5f);

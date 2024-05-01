@@ -1,14 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class WinZone : MonoBehaviour
 {
     public TMP_Text scoreText;
+    public AudioSource scoreSound; 
+    public AudioClip scoreClip; 
+
     private int score = 0;
-    private bool hasScored = false; // Flag to track if the score has already been incremented
+    private bool hasScored = false;
+    bool hasFootball = false;
+
+    public GameManager gameManager;
+    public TeamSwapper teamSwapper;
+    public GameObject homeStartPos;
+    public GameObject awayStartPos;
 
     void Start()
     {
@@ -25,10 +32,9 @@ public class WinZone : MonoBehaviour
 
     IEnumerator CheckForFootball(Transform player)
     {
-        // Continuously check for the presence of the football child
         while (true)
         {
-            bool hasFootball = false;
+            hasFootball = false;
             foreach (Transform child in player)
             {
                 if (child.name == "Football(Clone)")
@@ -38,15 +44,42 @@ public class WinZone : MonoBehaviour
                 }
             }
 
-            if (hasFootball && !hasScored) // Check if the player has the football and hasn't scored yet
+            if (hasFootball && !hasScored)
             {
-                // Increment the score when a player with the football enters the trigger area
                 score += 7;
                 UpdateScoreUI();
-                hasScored = true; // Set the flag to indicate that the score has been incremented
+                hasScored = true;
+
+                // Play the score sound
+                if(scoreSound && scoreClip)
+                    scoreSound.PlayOneShot(scoreClip);
+
+                // Stop all other coroutines before handling scoring
+                StopAllCoroutines();
+                HandleScore(player);
+                yield break;
             }
 
-            yield return null; // Wait for the next frame to check again
+            yield return null;
+        }
+    }
+
+    void HandleScore(Transform player)
+    {
+        // Reset necessary gameplay elements
+        gameManager.ResetDowns();
+        teamSwapper.SwapTeams();
+
+        // Teleport the Line of Scrimmage to the correct start position
+        if (teamSwapper.isHomeTeamWithBall) // Assuming 'isHomeTeamWithBall' means home team just scored
+        {
+            gameManager.TeleportLineOfS_Away(awayStartPos.transform.position);
+            hasScored = false;
+        }
+        else
+        {
+            gameManager.TeleportLineOfS(homeStartPos.transform.position);
+            hasScored = false;
         }
     }
 

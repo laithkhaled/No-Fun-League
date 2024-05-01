@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // Needed for IEnumerator
 
 public class FootballController : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class FootballController : MonoBehaviour
 
     void Start()
     {
-    gameManager = FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -21,19 +22,19 @@ public class FootballController : MonoBehaviour
             // Call CatchBall on the receiver's PlayerController script
             collision.gameObject.GetComponent<PlayerController>()?.CatchBall();
         }
-        if (collision.gameObject.CompareTag("Bounds"))
+        if (collision.gameObject.CompareTag("Bounds") || collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
-            // Use coroutine
-            //Invoke("DelayRandomFormation", 4.5f);
-            DelayRandomFormation();
-            gameManager.IncreaseDownCount();
-            Destroy(gameObject);
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            //Debug.Log("***************D*AS*D*AS*DAS*D*AS*DA*SD*AS*");
+            StartCoroutine(DelayIncreaseCount());
         }
     }
 
-    void DelayRandomFormation()
+    IEnumerator DelayIncreaseCount()
     {
+        yield return new WaitForSeconds(4.5f);
+        gameManager.IncreaseDownCount();
         gameManager.CallRandomFormationBoth();
+        Destroy(gameObject);
     }
 }

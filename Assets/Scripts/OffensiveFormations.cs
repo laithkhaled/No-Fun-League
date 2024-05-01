@@ -6,11 +6,9 @@ public class OffensiveFormations : MonoBehaviour
     public GameObject Wide2;
     public GameObject Wide3;
     public GameObject TEnd;
-    public GameObject LeftT;
-    public GameObject LeftG;
-    public GameObject Center;
-    public GameObject RightG;
-    public GameObject RightT;
+
+    public AudioSource whistleSound; 
+    public AudioClip whistleClip;
 
     private float playerSpeed; 
     private bool playerTackled;
@@ -28,6 +26,8 @@ public class OffensiveFormations : MonoBehaviour
         //CheckIfTackled();
         if (Input.GetKeyDown(KeyCode.F) && !isRunning) //Can't click F when the play is happening
         {
+            if(whistleSound && whistleClip)
+                    whistleSound.PlayOneShot(whistleClip);
             // Randomly choose a play. Need to make it choose through Formations in the future.
             int randomPlay = Random.Range(1, 4);
             switch (randomPlay)

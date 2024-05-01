@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject endZone;
 
+    public AudioSource scoreSound; 
+    public AudioClip tackleSound; 
+    public AudioClip catchSound;
+
     void Start()
     {
         FindEndZoneTarget();
@@ -100,6 +104,8 @@ public class PlayerController : MonoBehaviour
         GameManager gameManager = FindObjectOfType<GameManager>();
         Invoke("CallRandomFormationWithDelay", 4.5f);
         OnPlayerTackled(transform.position);
+        if(scoreSound && tackleSound)
+                    scoreSound.PlayOneShot(tackleSound);
     }
 
     void CallRandomFormationWithDelay()
@@ -114,6 +120,8 @@ public class PlayerController : MonoBehaviour
     {
         hasBall = true;
         animator.SetBool("getsBall", true);
-        isMoving = true; 
+        isMoving = true;
+        if(scoreSound && catchSound)
+                    scoreSound.PlayOneShot(catchSound);
     }
 }

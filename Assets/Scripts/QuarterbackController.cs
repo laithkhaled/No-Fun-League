@@ -11,6 +11,9 @@ public class QuarterbackController : MonoBehaviour
 
     public Animator animator;
 
+    public AudioSource throwSound; 
+    public AudioClip throwClip;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -34,9 +37,11 @@ public class QuarterbackController : MonoBehaviour
         if (receivers.Length > 0)
         {
             int index = Random.Range(0, receivers.Length);
-            yield return new WaitForSeconds(Random.Range(1f, 2f));
+            yield return new WaitForSeconds(Random.Range(1f, 3f));
             GameObject targetReceiver = receivers[index];
-            Debug.Log("Receiver Chosen: " + targetReceiver.name);
+            //Debug.Log("Receiver Chosen: " + targetReceiver.name);
+            if(throwSound && throwClip)
+                    throwSound.PlayOneShot(throwClip);
             Vector3 throwDirection = (targetReceiver.transform.position - transform.position).normalized;
             float throwForce = 1000;
             footballInstance.GetComponent<Rigidbody2D>().AddForce(throwDirection * throwForce);
