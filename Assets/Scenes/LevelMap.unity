@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '> Press F to start plays (plaese don''t press it more than once)'
+  m_text: '> Press F to start plays (please don''t press it more than once)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f31d1bcac603e84abb70fc8a945477c, type: 2}
   m_sharedMaterial: {fileID: 2643203677969708834, guid: 6f31d1bcac603e84abb70fc8a945477c, type: 2}
